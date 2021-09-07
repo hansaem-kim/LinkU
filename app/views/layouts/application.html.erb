@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LinkUApp</title>
+    <title>LinkU</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
+    
+    <script>
+      window.linkuLogo = '<%= image_url('linku_logo.png') %>';
+      window.uLogo = '<%= image_url('u_logo.png') %>';
+    </script>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>

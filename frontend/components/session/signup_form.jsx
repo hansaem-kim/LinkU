@@ -36,47 +36,36 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-        <div className="login-form-container">
+        <div className="session-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-            Welcome to LinkU!
             <br/>
-            Please {this.props.formType} or click to {this.props.navLink}
             {this.renderErrors()}
-            <div className="login-form">
-                <br/>
-                <label>Email:
+            <div className="signup-form">
                 <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
                     className="login-input"
+                    placeholder="Email"
                 />
-                </label>
-                <br/>
-                <label>Password:
                 <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="login-input"
+                    placeholder="Password"
                 />
-                </label>
-                <br/>
-                <label>First Name:
                 <input type="text"
                     value={this.state.first_name}
                     onChange={this.update('first_name')}
                     className="login-input"
+                    placeholder="First Name"
                 />
-                </label>
-                <br/>
-                <label>Last Name:
                 <input type="text"
                     value={this.state.last_name}
                     onChange={this.update('last_name')}
                     className="login-input"
+                    placeholder="Last Name"
                 />
-                </label>
-                <br/>
-                <input className="session-submit" type="submit" value={this.props.formType} />
+                <input className="session-submit-btn" type="submit" value={this.props.formType} />
             </div>
             </form>
         </div>

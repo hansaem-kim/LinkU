@@ -1,0 +1,68 @@
+body{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
+}
+
+.front-page{
+    .linku-logo {
+        width: 100px;
+    }
+    
+    .front-page-nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .joinnow, .signin {
+        margin-left: 20px;
+    }
+    
+    .welcome-message {
+        font-size: 3.5rem;
+        color: #8f5849;
+        font-weight: 200;   
+        margin-bottom: 30px;
+    }
+    
+    .welcome-section {
+        margin-left: 300px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .welcome-section-left {
+        margin-left: 100px;
+    }
+    
+    .welcome-img {
+        width: 700px;
+        margin-right: 200px;
+    }
+}
+
+.session-submit-btn {
+    background-color: #0a66c2;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 100;
+    cursor: pointer;
+    border-radius: 24px;
+    height: 50px;
+    width: 410px;
+    border: none;
+    margin-top: 20px;
+}
+
+.login-input {
+    margin-top: 20px;
+    height: 35px;
+    width: 400px;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
