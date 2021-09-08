@@ -1,5 +1,5 @@
 body{
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .front-page{
@@ -8,36 +8,60 @@ body{
     }
     
     .front-page-nav {
-        margin-top: 10px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 260px;
     }
     
     .joinnow, .signin {
+        color: gray;
+        font-size: 1.2rem;
         margin-left: 20px;
+        text-decoration: none;
+    }
+
+    .signin {
+        color: $myblue;
+        border: 1px solid $myblue;
+        border-radius: 24px;
+        padding: 5px 20px;
     }
     
     .welcome-message {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
         color: #8f5849;
         font-weight: 200;   
         margin-bottom: 30px;
+        margin-top: 15px;
     }
     
     .welcome-section {
-        margin-left: 300px;
         margin-top: 50px;
         display: flex;
         justify-content: space-around;
     }
     
     .welcome-section-left {
-        margin-left: 100px;
+        padding-left: 220px;
     }
     
     .welcome-img {
-        width: 700px;
-        margin-right: 200px;
+        width: 650px;
+        padding-right: 100px;
+    }
+
+    .join-section {
+        background-image: url(https://static-exp3.licdn.com/sc/h/2vt8plqbv2l2pi6kxm89bqs59);
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .join-message {
+        margin-top: 5vh;
+        font-size: 3rem;
+        font-weight: 300;
     }
 }
 
@@ -65,4 +89,5 @@ body{
     flex-direction: column;
     align-items: left;
 }
+
 

@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 
 class TopNav extends React.Component{
 
+    constructor(props) {
+        super(props); 
+        this.state = {show: false }
+
+        this.handleDrop = this.handleDrop.bind(this); 
+    }
+
+
+    handleDrop(e) {
+        const newState = !this.state.show 
+        this.setState({show: newState})
+    }
+
     render(){
         return(
             <div className='top-nav'>
@@ -37,11 +50,24 @@ class TopNav extends React.Component{
 
                     </div>
                     <div className='me-nav icon'>
-                        <ul>
-                            <li onClick={this.props.logout}>
-                                <Link to={'/'}>Log Out</Link>
-                            </li>
-                        </ul>
+                        <button className='nav-dropdown-btn' onClick={this.handleDrop}>
+                            ICON
+                            <ul onClick={e => e.stopPropagation()} className={this.state.show ? "show-dropdown" : "hide-dropdown"}>
+                                <li>
+                                    <div>
+                                        <h3>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h3>
+                                    </div>
+                                    <div>
+                                        <Link to={`/users/${this.props.currentUser.id}`} className='view-profile-btn'>
+                                            <h3 className='view-profile-msg'>View Profile</h3>
+                                        </Link>
+                                    </div>
+                                    <div className='logout-btn' onClick={this.props.logout}>
+                                        <h3>Log Out</h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </button>
                     </div>
 
                 </div>

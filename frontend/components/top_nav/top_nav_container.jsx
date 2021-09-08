@@ -6,7 +6,7 @@ import TopNav from './top_nav';
 const mSTP = (state) => ({
     session: state.session,
     users: state.entities.users,
-    currentuser: state.entities.users[state.session.id],
+    currentUser: state.entities.users[state.session.id],
 });
 
 const mDTP = (dispatch) => {

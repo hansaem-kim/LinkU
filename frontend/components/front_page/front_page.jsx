@@ -14,14 +14,17 @@ const FrontPage = () => {
                     <Link className="signin" to="/login">Sign in</Link>
                 </div>
             </div>
-            <div className = 'welcome-section'>
+            <section className = 'welcome-section'>
                 <div className = 'welcome-section-left'>
                     <h2 className = 'welcome-message'>Welcome to your <br/> professional community</h2>
                     <LoginFormContainer />
                 </div>
                 <img className = 'welcome-img' src="https://static-exp1.licdn.com/sc/h/dxf91zhqd2z6b0bwg85ktm5s4" alt="welcome-img" />
 
-            </div>
+            </section>
+            <section className = 'join-section'>
+                <h2 className='join-message'>Join your colleagues, classmates, and friends on LinkU.</h2>
+            </section>
 
 
         </div>

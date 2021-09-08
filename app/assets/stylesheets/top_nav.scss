@@ -2,26 +2,59 @@
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
+    .u-logo {
+        width: 40px;
+    }
+    
+    .right-nav {
+        color: #63605f;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .right-nav p {
+        font-size: 0.7rem;
+    }
+    
+    .right-nav .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .show-dropdown {
+        display: block;
+    }
+    
+    .hide-dropdown {
+        display: none;
+    }
+    
+    .nav-dropdown-btn {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li {
+            font-size: 1rem;
+            font-weight: 100;
+            margin: 10px;
+        }
+    }
+    
+    .view-profile-msg {
+        color: $myblue;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 1px solid $myblue;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+
+    .logout-btn {
+        cursor: pointer;
+    } 
 }
 
-.u-logo {
-    width: 40px;
-}
-
-.right-nav {
-    color: #63605f;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.right-nav p {
-    font-size: 0.7rem;
-}
-
-.right-nav .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20px;
-}
