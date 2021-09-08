@@ -11,6 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch --mode=development"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "7.20.5"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hansaem-kim/LinkU.git"
