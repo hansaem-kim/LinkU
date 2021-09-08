@@ -7,13 +7,17 @@ class TopNav extends React.Component{
         super(props); 
         this.state = {show: false }
 
-        this.handleDrop = this.handleDrop.bind(this); 
+        this.dropShow = this.dropShow.bind(this); 
+        this.dropHide = this.dropHide.bind(this);
     }
 
 
-    handleDrop(e) {
-        const newState = !this.state.show 
-        this.setState({show: newState})
+    dropShow(e) {
+        this.setState({show: true})
+    }
+
+    dropHide(e){
+        this.setState({show: false})
     }
 
     render(){
@@ -49,8 +53,8 @@ class TopNav extends React.Component{
                         <p>Notification</p>
 
                     </div>
-                    <div className='me-nav icon'>
-                        <button className='nav-dropdown-btn' onClick={this.handleDrop}>
+                    <div className='me-nav icon' onMouseLeave={this.dropHide}>
+                        <button className='nav-dropdown-btn' onClick={this.dropShow}>
                             ICON
                             <ul onClick={e => e.stopPropagation()} className={this.state.show ? "show-dropdown" : "hide-dropdown"}>
                                 <li>

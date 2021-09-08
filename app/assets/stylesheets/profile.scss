@@ -1,0 +1,27 @@
+.profile-div{
+    padding: 20px;
+    background-color: #f3f2ef;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sub-section {
+        background-color: white;
+        width: 40vw;
+        height: 30vh;
+        margin: 20px 0;
+        border-radius: 20px;
+        display: flex;
+    }
+
+    .background-img-div {
+        max-height:40%;
+        display: flex;
+        
+    }
+
+    .background-img {
+        width: 40vw;
+    }
+}
