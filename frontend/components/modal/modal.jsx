@@ -21,12 +21,15 @@ const Modal = ({ modal, hideModal }) => {
         case 'createEducation':
             component = <CreateEducationForm />;
             break;
+        case 'editEducation':
+            component = <EditEducationForm />;
+            break;
         default:
             return null;
     }
 
     return (
-        <div className='modal-div' onClick={closeModal}>
+        <div className='modal-div' onClick={hideModal}>
             <div className='modal-component-div' onClick={e => e.stopPropagation()}>
                 { component }
             </div>

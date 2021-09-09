@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_EDUCATIONS, RECEIVE_EDUCATION, REMOVE_EDUCATION } from '../actions/education';
+import { RECEIVE_ALL_EDUCATIONS, RECEIVE_EDUCATION, REMOVE_EDUCATION } from '../actions/education_actions';
 
 const educationsReducer = (state = {}, action) => {
   Object.freeze(state);

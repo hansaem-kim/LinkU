@@ -4,20 +4,22 @@ import { hideModal } from '../../../actions/modal_actions';
 import EducationForm from './education_form.jsx';
 
 
-const mSTP = ({ session: { currentUser } }) => ({
-    education: {
-        userId: currentUser.id,
-        school: "",
-        degree: "",
-        field: "",
-        start_date: "",
-        end_date: "",
-        grade: "",
-        activities: "",
-        description: ""
-    },
-    formType: 'Add Education'
-});
+const mSTP = (state) => {
+    return({
+        education: {
+            user_id: state.session.id,
+            school: "",
+            degree: "",
+            field: "",
+            start_date: "",
+            end_date: "",
+            grade: "",
+            activities: "",
+            description: ""
+        },
+        formType: 'Create Education'
+    })
+};
 
 const mDTP = dispatch => ({
     action: (education) => dispatch(createEducation(education)),

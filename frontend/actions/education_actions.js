@@ -19,8 +19,8 @@ const removeEducation = (educationId) => ({
     educationId
 });
 
-export const fetchAllEducations = () => dispatch => (
-    APIUtil.fetchAllEducations().then(educations => dispatch(receiveAllEducations(educations)))
+export const fetchAllEducations = (userId) => dispatch => (
+    APIUtil.fetchAllEducations(userId).then(educations => dispatch(receiveAllEducations(educations)))
 );
 
 export const createEducation = (education) => dispatch => (

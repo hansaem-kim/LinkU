@@ -8,7 +8,8 @@ class Profile extends React.Component{
     };
 
     componentDidMount(){
-        this.props.getUser(this.props.match.params.userId)
+        const { educations } = this.props;
+        // this.props.getUser(this.props.match.params.userId)
     }
 
     render(){

@@ -3,6 +3,7 @@ import Profile from './profile'
 import { getUser } from '../../actions/user_actions'
 
 const mSTP = (state, ownProps) => ({
+    educations: state.entities.educations,
     profileUser: state.entities.users[ownProps.match.params.userId],
     currentUser: state.entities.users[state.session.id],
 

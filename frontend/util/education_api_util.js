@@ -14,10 +14,11 @@ export const updateEducation = (education) => (
     })
 );
 
-export const fetchAllEducations = () => (
+export const fetchAllEducations = (userId) => (
     $.ajax({
         method: 'GET',
-        url: '/api/educations'
+        url: '/api/educations',
+        data: { userId }
     })
 );
 
