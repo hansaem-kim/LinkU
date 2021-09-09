@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EducationIndexContainer from './educations/education_index_container';
 
 class Profile extends React.Component{
     constructor(props){
@@ -28,7 +29,7 @@ class Profile extends React.Component{
                     <p>Experience</p>
                 </section>
                 <section className='sub-section education'>
-                    <p>Education</p>
+                    <EducationIndexContainer />
                 </section>
 
                 

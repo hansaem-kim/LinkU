@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { showModal } from '../../../actions/modal_actions';
 import EducationIndex from './education_index'
 
 const mSTP = (state, ownProps) => ({
@@ -9,7 +10,7 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = (dispatch) => ({
-
+    showModal: modal => dispatch(showModal(modal))
 });
   
 export default withRouter(connect(mSTP, mDTP)(EducationIndex));

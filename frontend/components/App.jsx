@@ -7,9 +7,11 @@ import SignupFormContainer from './session/signup_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
 import FrontPage from "./front_page/front_page";
 import ProfileContainer from "./profile/profile_container";
+import Modal from "./modal/modal";
 
 const App = () => (
   <div>
+    <Modal />
     <ProtectedRoute component={TopNavContainer}/>
     <Switch>
       <AuthRoute exact path="/" component={FrontPage}/>
