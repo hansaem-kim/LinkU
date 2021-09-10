@@ -38,7 +38,7 @@ class PostForm extends React.Component{
                         </div>
                         
                         <footer>
-                            <button onClick={this.handleSubmit} className='post-submit-btn'>Post</button>
+                            <button className='post-submit-btn'>Post</button>
                         </footer>
                     </form>
                 </div>

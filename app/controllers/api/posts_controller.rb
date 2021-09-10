@@ -1,9 +1,14 @@
-class Api::EducationsController < ApplicationController
+class Api::PostsController < ApplicationController
 
     def index
         @posts = Post.all
         render 'api/posts/index'
     end
+
+    def show
+        @post = Post.find(params[:id])
+      end
+    
 
     def destroy
         @post = Post.find(params[:id])
@@ -13,7 +18,7 @@ class Api::EducationsController < ApplicationController
     def create
         @post = Post.new(post_params)
         if @post.save
-            render 'api/posts/show'
+            render :show
         else
             render json: @posts.errors.full_messages, status: 422
         end
@@ -22,7 +27,7 @@ class Api::EducationsController < ApplicationController
     def update
         @post = Post.find(params[:id])
         if @post.update(post_params)
-            render 'api/posts/show'
+            render :show
         else
             render json: @post.errors.full_messages, status: 422
         end
@@ -31,6 +36,6 @@ class Api::EducationsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:body)
+        params.require(:post).permit(:body, :author_id)
     end
 end
