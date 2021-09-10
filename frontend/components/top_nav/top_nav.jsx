@@ -25,15 +25,17 @@ class TopNav extends React.Component{
             <div className='top-nav'>
                 <div className='left-nav'>
                     <div className='logo-nav'>
-                        <Link to='/'>
+                        <Link to='/feed'>
                             <img className='u-logo' src={window.uLogo} />
                         </Link>
                     </div>
                 </div>
                 <div className='right-nav'>
                     <div className='home-nav icon'>
-                        <i className="fas fa-home"></i>
-                        <p>Home</p>
+                        <Link to='/feed'>
+                            <i className="fas fa-home"></i>
+                            <p>Home</p>
+                        </Link>
                     </div>
                     <div className='network-nav icon'>
                         <i className="fas fa-user-friends"></i>

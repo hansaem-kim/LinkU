@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_EDUCATIONS, RECEIVE_EDUCATION, REMOVE_EDUCATION } from '../actions/education_actions';
 
-const educationsReducer = (state = {}, action) => {
+const educationReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
@@ -17,4 +17,4 @@ const educationsReducer = (state = {}, action) => {
   }
 };
 
-export default educationsReducer;
+export default educationReducer;

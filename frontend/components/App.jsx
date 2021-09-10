@@ -8,6 +8,7 @@ import TopNavContainer from './top_nav/top_nav_container';
 import FrontPage from "./front_page/front_page";
 import ProfileContainer from "./profile/profile_container";
 import Modal from "./modal/modal";
+import FeedContainer from "./feed/feed_container";
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path='/users/:userId' component={ProfileContainer} />
+      <ProtectedRoute exact path='/feed' component={FeedContainer} />
 
     </Switch>
 
