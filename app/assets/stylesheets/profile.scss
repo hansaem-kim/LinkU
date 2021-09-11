@@ -8,10 +8,10 @@
 
     .sub-section {
         background-color: white;
-        width: 40vw;
-        height: 30vh;
+        width: 55vw;
         margin: 20px 0;
-        border-radius: 20px;
+        border-radius: 10px;
+        border: 1px solid lightgray;
         display: flex;
     }
 
@@ -24,4 +24,59 @@
     .background-img {
         width: 40vw;
     }
+
+    .education-div {
+        display: flex;
+        flex-direction: column;
+
+        
+
+        header {
+            margin-top: 10px;
+            padding: 15px;
+            width: 55vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .education-index {
+            padding: 15px;
+        }
+    }
+    .created-education-div {
+        background-color: white;
+        width: 50vw;
+        display: flex;
+        margin-bottom: 15px;
+
+        .education-img {
+            width: 65px;
+            height: 65px;
+            margin-right: 20px;
+        }
+
+        .education-info {
+            display: flex;
+            width: 50vw;
+            flex-direction: column;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .school-info {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .degree-field-grade-info {
+            display: flex;
+            font-size: 0.8rem;
+        }
+
+        .activity-description-info {
+            font-size: 0.8rem;
+        }
+    }
+
 }

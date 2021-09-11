@@ -19,8 +19,8 @@ class Api::EducationsController < ApplicationController
     end
   end
 
-  def index 
-    @educations = Education.where(user_id: params[:user_id])
+  def index
+    @educations = Education.where(user_id: params[:userId])
   end
   
   def destroy 

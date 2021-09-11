@@ -13,14 +13,32 @@ const EducationIndexItem = ({education, showModal, currentUser, match})  => {
     }
 
     return(
-        <div>
-            <p>{education.school}</p>
-            <p>{education.degree}</p>
-            <p>{education.start_date} - {education.end_date}</p>
-            <p>{education.grade}</p>
-            <p>{education.activities}</p>
-            <p>{education.description}</p>
-            {editButton}
+        <div className='created-education-div'>
+            <img src={window.educationImg} className='education-img' />
+
+            <div className='education-info'>
+                <div className='school-info'>
+                    <p>{education.school}</p>
+                </div>
+                
+
+                <div className='degree-field-grade-info'>
+                    <p>{education.degree}</p>
+                    <p>, {education.field}</p>
+                    <p>, {education.grade}</p>
+                </div>
+
+                <p>{education.start_date} - {education.end_date}</p>
+                <div className='activity-description-info'>
+                    <p>{education.activities}</p>
+                    <p>{education.description}</p>
+                </div>
+
+            </div>
+
+            <footer>
+                {editButton}
+            </footer>
         </div>
     )
 };
