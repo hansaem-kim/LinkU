@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = (dispatch) => ({
-    showModal: (modal) => dispatch(showModal(modal)),
+    showModal: (modal, id) => dispatch(showModal(modal, id)),
     fetchAllEducations: (userId) => dispatch(fetchAllEducations(userId))
 
 

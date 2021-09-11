@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { hideModal } from '../../actions/modal_actions';
 import CreateEducationForm from '../profile/educations/create_education';
+import EditEducationForm from '../profile/educations/edit_education';
 import CreatePostForm from '../post/create_post_form_container';
+
 
 const mSTP = (state) => ({
     modal: state.ui.modal
@@ -12,8 +14,8 @@ const mDTP = (dispatch) => ({
     hideModal: () => dispatch(hideModal())
 });
 
-const Modal = ({ modal, hideModal }) => {
-    
+const Modal = (state) => {
+    const modal = state.modal;
     if (!modal) return null;
 
     let component;
@@ -21,9 +23,9 @@ const Modal = ({ modal, hideModal }) => {
         case 'createEducation':
             component = <CreateEducationForm />;
             break;
-        // case 'editEducation':
-        //     component = <EditEducationForm />;
-        //     break;
+        case 'editEducation':
+            component = <EditEducationForm />;
+            break;
         case 'createPost':
             component = <CreatePostForm />;
             break;

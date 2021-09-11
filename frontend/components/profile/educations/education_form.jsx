@@ -36,6 +36,11 @@ class EducationForm extends React.Component {
     }
 
     render(){
+        debugger;
+        const deleteButton = this.props.formType === 'Edit Education' ? (
+            <button onClick={() => {
+                this.props.deleteEducation(this.state.id); this.props.hideModal()}} className='education-delete-btn'>Delete education</button>
+            ) : null;
         return(
             <div className='education-form'>
                 <header>
@@ -133,7 +138,8 @@ class EducationForm extends React.Component {
                 </div>
             
                 <footer>
-                        <button className='education-create-btn' onClick={this.handleSubmit}>Save</button>
+                    {deleteButton}
+                    <button className='education-create-btn' onClick={this.handleSubmit}>Save</button>
                 </footer>
             </div>
 

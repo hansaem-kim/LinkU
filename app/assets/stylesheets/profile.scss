@@ -1,14 +1,13 @@
 .profile-div{
     padding: 20px;
     background-color: #f3f2ef;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .sub-section {
         background-color: white;
-        width: 55vw;
+        width: 40vw;
         margin: 20px 0;
         border-radius: 10px;
         border: 1px solid lightgray;
@@ -29,24 +28,28 @@
         display: flex;
         flex-direction: column;
 
-        
+        .create-btn {
+            cursor: pointer;
+        }
 
         header {
             margin-top: 10px;
             padding: 15px;
-            width: 55vw;
+            padding-right: 25px;
+            width: 40vw;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
 
         .education-index {
-            padding: 15px;
+            padding-top: 15px;
+            padding-left: 15px;
         }
     }
     .created-education-div {
         background-color: white;
-        width: 50vw;
+        width: 38vw;
         display: flex;
         margin-bottom: 15px;
 
@@ -56,9 +59,14 @@
             margin-right: 20px;
         }
 
+        .edit-btn {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
         .education-info {
             display: flex;
-            width: 50vw;
+            width: 30vw;
             flex-direction: column;
             padding-bottom: 10px;
             border-bottom: 1px solid lightgray;

@@ -147,7 +147,7 @@
 
         .education-create-btn{
             position: relative;
-            left: 90%;
+            left: 65%;
             font-size: 0.9rem;
             background-color: #0a66c2;
             border-radius: 24px;
@@ -156,6 +156,21 @@
             padding: 7px;
             width: 60px;
             cursor: pointer;
+        }
+
+        .education-delete-btn {
+            font-size: 0.9rem;
+            background-color: white;
+            border-radius: 24px;
+            color: gray;
+            border: 1px solid gray;
+            padding: 7px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .education-delete-btn:hover {
+            background-color: rgba(0, 0, 0, 0.3);
         }
     }
 }

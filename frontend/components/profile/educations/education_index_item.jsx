@@ -6,8 +6,8 @@ import { showModal } from '../../../actions/modal_actions';
 const EducationIndexItem = ({education, showModal, currentUser, match})  => {
     let editButton;
     if (currentUser.id == match.params.userId) {
-        editButton = (<div className='edit-btn'>
-        <i className="fas fa-pencil-alt" onClick={() => showModal('editEducation')}></i></div>)
+        editButton = (<div className='edit-btn' onClick={() => {return showModal('editEducation', education.id)}} >
+        <i className="fas fa-pencil-alt" ></i></div>)
     }else{
         editButton = null;
     }
@@ -50,7 +50,7 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = (dispatch) => ({
-    showModal: (modal) => dispatch(showModal(modal))
+    showModal: (modal, id) => dispatch(showModal(modal, id))
 });
 
 export default withRouter(connect(mSTP, mDTP)(EducationIndexItem));
