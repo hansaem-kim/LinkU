@@ -37,77 +37,104 @@ class EducationForm extends React.Component {
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <h3>{this.props.formType}</h3>
-                    <label>School</label>
-                    <input type="text" value={this.state.school} onChange={this.update('school')}/>
+            <div className='education-form'>
+                <header>
+                        <div className="form-type">
+                            <h3>{this.props.formType}</h3>
+                            <div className='close-btn' onClick={()=> this.props.hideModal()}>
+                                <i className="fas fa-times"></i>
+                            </div>
+                        </div>
 
-                    <label>Degree</label>
-                    <input type="text" value={this.state.degree} onChange={this.update('degree')}/>
+                </header>
+                <div className='form-body'>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="school-div ed-form-sub">
+                            <label>School</label>
+                            <input type="text" placeholder="Ex: Boston University" value={this.state.school} onChange={this.update('school')}/>
+                        </div>
 
-                    <label>Field of study</label>
-                    <input type="text" value={this.state.field} onChange={this.update('field')}/>
+                        <div className="degree-div ed-form-sub">
+                            <label>Degree</label>
+                            <input type="text" placeholder="Ex: Bachelor's" value={this.state.degree} onChange={this.update('degree')}/>
+                        </div>
 
-                    <div>
-                        <label>Start date</label>
-                        <select onChange={this.update('start_month')}>
-                            <option defaultValue>Month</option> 
-                            <option>January</option>
-                            <option>February</option>
-                            <option>March</option>
-                            <option>April</option>
-                            <option>May</option>
-                            <option>June</option>
-                            <option>July</option>
-                            <option>August</option>
-                            <option>September</option>
-                            <option>October</option>
-                            <option>November</option>
-                            <option>December</option>
-                        </select>
+                        <div className="field-div ed-form-sub">
+                            <label>Field of study</label>
+                            <input type="text" placeholder="Ex: Business" value={this.state.field} onChange={this.update('field')}/>
+                        </div>
 
-                        <select onChange={this.update('start_year')}>
-                            <option defaultValue>Year</option>
-                            {this.getYears()}
-                        </select>
-                    </div>
+                        <div className='start-date-div ed-form-sub'>
+                            <label>Start date</label>
+                            <div className='date-selector'>
+                                <select onChange={this.update('start_month')}>
+                                    <option defaultValue>Month</option> 
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
 
-                    <div>
-                        <label>End date</label>
-                        <select onChange={this.update('end_month')}>
-                            <option defaultValue>Month</option>
-                            <option>January</option>
-                            <option>February</option>
-                            <option>March</option>
-                            <option>April</option>
-                            <option>May</option>
-                            <option>June</option>
-                            <option>July</option>
-                            <option>August</option>
-                            <option>September</option>
-                            <option>October</option>
-                            <option>November</option>
-                            <option>December</option>
-                        </select>
+                                <select onChange={this.update('start_year')}>
+                                    <option defaultValue>Year</option>
+                                    {this.getYears()}
+                                </select>
+                            </div>
+                        </div>
 
-                        <select onChange={this.update('end_year')}>
-                            <option defaultValue>Year</option>
-                            {this.getYears()}
-                        </select>
-                    </div>
+                        <div className='end-date-div ed-form-sub'>
+                            <label>End date</label>
+                            <div className='date-selector'>
+                                <select onChange={this.update('end_month')}>
+                                    <option defaultValue>Month</option>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
 
-                    <label>Grade</label>
-                    <input type="text" value={this.state.grade} onChange={this.update('grade')}/>
+                                <select onChange={this.update('end_year')}>
+                                    <option defaultValue>Year</option>
+                                    {this.getYears()}
+                                </select>
+                            </div>
+                        </div>
 
-                    <label>Activities and societies</label>
-                    <textarea value={this.state.activities} onChange={this.update('activities')}/>
+                        <div className = 'grade-div ed-form-sub'>
+                            <label>Grade</label>
+                            <input type="text" value={this.state.grade} onChange={this.update('grade')}/>
+                        </div>
+                        <div className = 'activity-div ed-form-sub'>
+                            <label>Activities and societies</label>
+                            <textarea placeholder="Ex: Alpha Phi Omega, Marching Band, Volleyball" value={this.state.activities} onChange={this.update('activities')}/>
+                        </div>
+                        <div className = 'description-div ed-form-sub'>
+                            <label>Description</label>
+                            <textarea value={this.state.description} onChange={this.update('description')}/>
+                        </div>
 
-                    <label>Description</label>
-                    <textarea value={this.state.description} onChange={this.update('description')}/>
-
-                    <button onClick={this.handleSubmit}>Save</button>
-                </form>
+                    </form>
+                </div>
+            
+                <footer>
+                        <button className='education-create-btn' onClick={this.handleSubmit}>Save</button>
+                </footer>
             </div>
 
         )

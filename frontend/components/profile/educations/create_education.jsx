@@ -17,7 +17,7 @@ const mSTP = (state) => {
             activities: "",
             description: ""
         },
-        formType: 'Create Education'
+        formType: 'Add Education'
     })
 };
 

@@ -8,7 +8,7 @@ class Feed extends React.Component{
                 <div className='post-div'>
                     <div className='top-div'>
                         <img className = 'user-photo' src={window.hansaemPhoto} alt="hansaem-photo" />
-                        <button className="start-post-btn">start a post</button>
+                        <button onClick={()=>this.props.showModal('createPost')} className="start-post-btn">start a post</button>
                     </div>
                     <div className='botton-div'>
                         <div className='photo-icon icon'>

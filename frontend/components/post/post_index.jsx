@@ -8,15 +8,13 @@ class PostIndex extends React.Component {
     }
 
     render(){
-        const {posts, destroyPost} = this.props;
+        const {posts, destroyPost, currentUser} = this.props;
         return(
             <div>
                 {posts.map(post=>(
-                            <PostIndexItem post={post} destroyPost={destroyPost} key={post.id}/>
+                            <PostIndexItem post={post} currentUser={currentUser} destroyPost={destroyPost} key={post.id}/>
                             ))
                 }
-
-                <CreatePostFormContainer />
             </div>
         )
     }

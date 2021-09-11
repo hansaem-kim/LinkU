@@ -1,0 +1,161 @@
+.post-form{
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.form-type{
+    font-weight: 500;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+
+    .close-btn{
+        padding-right: 10px;
+    }
+}
+
+.user-info{
+    padding: 15px;
+    display: flex;
+
+    .user-photo{
+        margin-right: 10px;
+        border-radius: 50%;
+        width: 50px;
+    }
+}
+
+.post-form-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    textarea{
+        width: 450px;
+        height: 200px;
+        resize: none;
+        border: none;
+        padding: 5px;
+    }
+
+    footer{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+
+        .post-submit-btn{
+            font-size: 0.9rem;
+            background-color: #0a66c2;
+            border-radius: 24px;
+            color: white;
+            border: none;
+            padding: 7px;
+            width: 60px;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-div {
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+
+    .modal-component-div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.education-form {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 680px;
+    height: 90vh;
+    // margin-bottom: 30px;
+    
+    form{
+        
+        display: flex;
+        flex-direction: column;
+
+        label{
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        .ed-form-sub {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input{
+            margin-top: 5px;
+            width: 600px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        textarea{
+            margin-top: 5px;
+            width: 600px;
+            height: 75px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .date-selector {
+            display: flex;
+        }
+
+        select{
+            margin-top: 5px;
+            height: 30px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-right: 10px;
+        }
+    }
+
+    footer{
+        border-top: 1px solid lightgray;
+        width: 670px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+
+        .education-create-btn{
+            position: relative;
+            left: 90%;
+            font-size: 0.9rem;
+            background-color: #0a66c2;
+            border-radius: 24px;
+            color: white;
+            border: none;
+            padding: 7px;
+            width: 60px;
+            cursor: pointer;
+        }
+    }
+}

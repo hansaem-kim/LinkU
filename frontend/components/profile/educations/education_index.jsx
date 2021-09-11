@@ -13,10 +13,9 @@ class EducationIndex extends React.Component {
     render() {
         const { educations, showModal, match, currentUser } = this.props;
         let createButton;
-        // showModal('createEducation')
         if (currentUser.id == match.params.userId) {
-            createButton = (<div className='create-btn'>
-            <i className="fas fa-plus" onClick={()=>showModal('createEducation')}></i></div>)
+            createButton = (<div className='create-btn' onClick={()=>showModal('createEducation')}>
+            <i className="fas fa-plus"></i></div>)
         }else{
             createButton = null;
         }

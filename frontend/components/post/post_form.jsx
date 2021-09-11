@@ -9,7 +9,7 @@ class PostForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        return this.props.action(this.state);
+        this.props.action(this.state).then(this.props.hideModal);
     }
 
     update(field){
@@ -23,6 +23,10 @@ class PostForm extends React.Component{
                 <header>
                     <div className='form-type'>
                         <h1>{this.props.formType}</h1>
+                        <div className='close-btn' onClick={()=> this.props.hideModal()}>
+                            <i className="fas fa-times"></i>
+                        </div>
+                        
                     </div>
 
                     <div className='user-info'>

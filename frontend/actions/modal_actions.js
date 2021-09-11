@@ -3,7 +3,7 @@ export const HIDE_MODAL = 'HIDE_MODAL';
 
 export const showModal = (modal) => ({
     type: SHOW_MODAL,
-    modal,
+    modal
 })
 
 export const hideModal = () => ({
