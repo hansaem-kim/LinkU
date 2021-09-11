@@ -75,7 +75,7 @@
         .school-info {
             font-size: 1rem;
             font-weight: 500;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .degree-field-grade-info {
             display: flex;
@@ -84,6 +84,16 @@
 
         .activity-description-info {
             font-size: 0.8rem;
+            color: gray;
+        }
+
+        .date-info {
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        p{
+            margin-top: 3px;
         }
     }
 

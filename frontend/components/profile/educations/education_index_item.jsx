@@ -11,7 +11,6 @@ const EducationIndexItem = ({education, showModal, currentUser, match})  => {
     }else{
         editButton = null;
     }
-
     return(
         <div className='created-education-div'>
             <img src={window.educationImg} className='education-img' />
@@ -28,9 +27,14 @@ const EducationIndexItem = ({education, showModal, currentUser, match})  => {
                     <p>, {education.grade}</p>
                 </div>
 
-                <p>{education.start_date} - {education.end_date}</p>
+                <div className='date-info'>
+                    <p>{education.startDate} - {education.endDate}</p>
+                </div>
+
+                
                 <div className='activity-description-info'>
-                    <p>{education.activities}</p>
+                    <p>Activities and Societies: {education.activities}</p>
+                    <br />
                     <p>{education.description}</p>
                 </div>
 

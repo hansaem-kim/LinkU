@@ -9,12 +9,13 @@ class EducationForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const start_date = `${this.state.start_year}-${this.state.start_month}`;
-        const end_date = `${this.state.end_year}-${this.state.end_month}`;
+        const start_date = `${this.state.start_month} ${this.state.start_year}`;
+        const end_date = `${this.state.end_month} ${this.state.end_year}`;
+        debugger;
         this.props.action({
             ...this.state,
-            start_date,
-            end_date
+            start_date: start_date,
+            end_date: end_date
         });
         this.props.hideModal();
     }
@@ -36,7 +37,6 @@ class EducationForm extends React.Component {
     }
 
     render(){
-        debugger;
         const deleteButton = this.props.formType === 'Edit Education' ? (
             <button onClick={() => {
                 this.props.deleteEducation(this.state.id); this.props.hideModal()}} className='education-delete-btn'>Delete education</button>
