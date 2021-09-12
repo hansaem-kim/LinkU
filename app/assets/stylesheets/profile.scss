@@ -5,6 +5,11 @@
     flex-direction: column;
     align-items: center;
 
+    .user {
+        display: flex;
+        flex-direction: column;
+    }
+
     .sub-section {
         background-color: white;
         width: 40vw;
@@ -15,13 +20,17 @@
     }
 
     .background-img-div {
-        max-height:40%;
         display: flex;
-        
     }
 
     .background-img {
         width: 40vw;
+        height: 20vh;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
     }
 
     .education-div {
@@ -88,6 +97,82 @@
         }
 
         .date-info {
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        p{
+            margin-top: 3px;
+        }
+    }
+
+
+
+    .experience-div {
+        display: flex;
+        flex-direction: column;
+
+        .create-btn {
+            cursor: pointer;
+        }
+
+        header {
+            margin-top: 10px;
+            padding: 15px;
+            padding-right: 25px;
+            width: 40vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .experience-index {
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    .created-experience-div {
+        background-color: white;
+        width: 38vw;
+        display: flex;
+        margin-bottom: 15px;
+
+        .experience-img {
+            width: 65px;
+            height: 65px;
+            margin-right: 20px;
+        }
+
+        .edit-btn {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .experience-info {
+            display: flex;
+            width: 30vw;
+            flex-direction: column;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .title-info {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .company-employment-info {
+            display: flex;
+            font-size: 0.8rem;
+        }
+
+        .description-info {
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        .date-info, .location-info{
             font-size: 0.8rem;
             color: gray;
         }

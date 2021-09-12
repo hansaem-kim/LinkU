@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import { hideModal } from '../../actions/modal_actions';
 import CreateEducationForm from '../profile/educations/create_education';
 import EditEducationForm from '../profile/educations/edit_education';
+import CreateExperienceForm from '../profile/experiences/create_experience';
+import EditExperienceForm from '../profile/experiences/edit_experience';
+import CreateAboutForm from '../profile/abouts/create_about';
+import EditAboutForm from '../profile/abouts/edit_about';
 import CreatePostForm from '../post/create_post_form_container';
+import UserIntroForm from '../profile/user_intros/user_intro_form';
 
 
 const mSTP = (state) => ({
@@ -17,7 +22,6 @@ const mDTP = (dispatch) => ({
 const Modal = (state) => {
     const modal = state.modal;
     if (!modal) return null;
-
     let component;
     switch(modal){
         case 'createEducation':
@@ -25,6 +29,21 @@ const Modal = (state) => {
             break;
         case 'editEducation':
             component = <EditEducationForm />;
+            break;
+        case 'createExperience':
+            component = <CreateExperienceForm />;
+            break;
+        case 'editExperience':
+            component = <EditExperienceForm />;
+            break;
+        case 'createAbout':
+            component = <CreateAboutForm />;
+            break;
+        case 'editAbout':
+            component = <EditAboutForm />;
+            break;
+        case 'editUserIntro':
+            component = <UserIntroForm />;
             break;
         case 'createPost':
             component = <CreatePostForm />;

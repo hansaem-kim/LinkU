@@ -13,3 +13,9 @@ export const getUser = (id) => (dispatch) => (
         err => dispatch(receiveErrors(err))
     )
 )
+
+export const updateUser = (user) => (dispatch) => (
+    APIUtil.updateUser(user).then(
+        user => dispatch(receiveUser(user))
+    )
+)

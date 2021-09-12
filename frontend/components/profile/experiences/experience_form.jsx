@@ -1,9 +1,9 @@
 import React from 'react';
 
-class EducationForm extends React.Component {
+class ExperienceForm extends React.Component {
     constructor(props){
         super(props);
-        this.state = this.props.education;
+        this.state = this.props.experience;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -36,12 +36,12 @@ class EducationForm extends React.Component {
     }
 
     render(){
-        const deleteButton = this.props.formType === 'Edit Education' ? (
+        const deleteButton = this.props.formType === 'Edit Experience' ? (
             <button onClick={() => {
-                this.props.deleteEducation(this.state.id); this.props.hideModal()}} className='education-delete-btn'>Delete education</button>
+                this.props.deleteExperience(this.state.id); this.props.hideModal()}} className='experience-delete-btn'>Delete experience</button>
             ) : null;
         return(
-            <div className='education-form'>
+            <div className='experience-form'>
                 <header>
                     <div className="form-type">
                         <h3>{this.props.formType}</h3>
@@ -52,22 +52,39 @@ class EducationForm extends React.Component {
                 </header>
                 <div className='form-body'>
                     <form onSubmit={this.handleSubmit}>
-                        <div className="school-div ed-form-sub">
-                            <label>School</label>
-                            <input type="text" placeholder="Ex: Boston University" value={this.state.school} onChange={this.update('school')}/>
+                        <div className="title-div ex-form-sub">
+                            <label>Title*</label>
+                            <input type="text" placeholder="Ex: Retail Sales Manager" value={this.state.title} onChange={this.update('title')}/>
                         </div>
 
-                        <div className="degree-div ed-form-sub">
-                            <label>Degree</label>
-                            <input type="text" placeholder="Ex: Bachelor's" value={this.state.degree} onChange={this.update('degree')}/>
+                        <div className='employment-type-div ex-form-sub'>
+                            <label>Employment type</label>
+                            <div className='employment-type-selector'>
+                                <select onChange={this.update('employment_type')}>
+                                    <option defaultValue>Please select</option> 
+                                    <option>Full-time</option>
+                                    <option>Part-time</option>
+                                    <option>Self-employed</option>
+                                    <option>Freelance</option>
+                                    <option>Contract</option>
+                                    <option>Internship</option>
+                                    <option>Apprenticeship</option>
+                                    <option>Seasonal</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div className="field-div ed-form-sub">
-                            <label>Field of study</label>
-                            <input type="text" placeholder="Ex: Business" value={this.state.field} onChange={this.update('field')}/>
+                        <div className="company-div ex-form-sub">
+                            <label>Company name*</label>
+                            <input type="text" placeholder="Ex: Microsoft" value={this.state.company} onChange={this.update('company')}/>
                         </div>
 
-                        <div className='start-date-div ed-form-sub'>
+                        <div className="location-div ex-form-sub">
+                            <label>Location</label>
+                            <input type="text" placeholder="Ex: London, United Kingdom" value={this.state.location} onChange={this.update('location')}/>
+                        </div>
+
+                        <div className='start-date-div ex-form-sub'>
                             <label>Start date</label>
                             <div className='date-selector'>
                                 <select onChange={this.update('start_month')}>
@@ -93,7 +110,7 @@ class EducationForm extends React.Component {
                             </div>
                         </div>
 
-                        <div className='end-date-div ed-form-sub'>
+                        <div className='end-date-div ex-form-sub'>
                             <label>End date</label>
                             <div className='date-selector'>
                                 <select onChange={this.update('end_month')}>
@@ -119,15 +136,17 @@ class EducationForm extends React.Component {
                             </div>
                         </div>
 
-                        <div className = 'grade-div ed-form-sub'>
-                            <label>Grade</label>
-                            <input type="text" value={this.state.grade} onChange={this.update('grade')}/>
+                        <div className = 'headline-div ex-form-sub'>
+                            <label>Headline</label>
+                            <input type="text" value={this.state.headline} onChange={this.update('headline')}/>
                         </div>
-                        <div className = 'activity-div ed-form-sub'>
-                            <label>Activities and societies</label>
-                            <textarea placeholder="Ex: Alpha Phi Omega, Marching Band, Volleyball" value={this.state.activities} onChange={this.update('activities')}/>
+
+                        <div className = 'industry-div ex-form-sub'>
+                            <label>Industry</label>
+                            <input type="text" value={this.state.industry} onChange={this.update('industry')}/>
                         </div>
-                        <div className = 'description-div ed-form-sub'>
+
+                        <div className = 'description-div ex-form-sub'>
                             <label>Description</label>
                             <textarea value={this.state.description} onChange={this.update('description')}/>
                         </div>
@@ -137,7 +156,7 @@ class EducationForm extends React.Component {
             
                 <footer>
                     {deleteButton}
-                    <button className='education-create-btn' onClick={this.handleSubmit}>Save</button>
+                    <button className='experience-create-btn' onClick={this.handleSubmit}>Save</button>
                 </footer>
             </div>
 
@@ -147,4 +166,4 @@ class EducationForm extends React.Component {
     }
 }
 
-export default EducationForm;
+export default ExperienceForm;

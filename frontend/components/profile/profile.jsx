@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EducationIndexContainer from './educations/education_index_container';
+import ExperienceIndexContainer from './experiences/experience_index_container';
+import AboutIndexContainer from './abouts/about_index_container';
+import UserIntro from './user_intros/user_intro'
+
 
 class Profile extends React.Component{
     constructor(props){
@@ -16,17 +20,16 @@ class Profile extends React.Component{
             <div className='profile-div'>
                 <h1>This is the profile page of {this.props.currentUser.first_name}</h1>
                 <section className='sub-section user'>
-                    {/* <p>User info</p> */}
                     <div className='background-img-div'>
                         <img className="background-img" src={window.profileBackground} />
                     </div>
-                    
+                    <UserIntro />
                 </section>
                 <section className='sub-section about'>
-                    <p>About</p>
+                    <AboutIndexContainer />
                 </section>
                 <section className='sub-section experience'>
-                    <p>Experience</p>
+                    <ExperienceIndexContainer />
                 </section>
                 <section className='sub-section education'>
                     <EducationIndexContainer />

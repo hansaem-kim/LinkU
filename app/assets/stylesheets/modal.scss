@@ -174,3 +174,100 @@
         }
     }
 }
+
+
+.experience-form {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 680px;
+    height: 90vh;
+    // margin-bottom: 30px;
+    
+    form{
+        
+        display: flex;
+        flex-direction: column;
+
+        label{
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        .ex-form-sub {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input{
+            margin-top: 5px;
+            width: 600px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        textarea{
+            margin-top: 5px;
+            width: 600px;
+            height: 75px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .date-selector {
+            display: flex;
+        }
+
+        select{
+            margin-top: 5px;
+            height: 30px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-right: 10px;
+        }
+    }
+
+    footer{
+        border-top: 1px solid lightgray;
+        width: 670px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+
+        .experience-create-btn{
+            position: relative;
+            left: 65%;
+            font-size: 0.9rem;
+            background-color: #0a66c2;
+            border-radius: 24px;
+            color: white;
+            border: none;
+            padding: 7px;
+            width: 60px;
+            cursor: pointer;
+        }
+
+        .experience-delete-btn {
+            font-size: 0.9rem;
+            background-color: white;
+            border-radius: 24px;
+            color: gray;
+            border: 1px solid gray;
+            padding: 7px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .experience-delete-btn:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
