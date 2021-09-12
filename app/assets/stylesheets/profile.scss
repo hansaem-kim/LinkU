@@ -5,6 +5,10 @@
     flex-direction: column;
     align-items: center;
 
+    header > h2 {
+        font-size: 1.2rem;
+    }
+
     .user {
         display: flex;
         flex-direction: column;
@@ -31,6 +35,93 @@
     .user-info {
         display: flex;
         flex-direction: column;
+
+        .edit-btn {
+            margin-right: 10px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .user-name > h2 {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+
+        .user-headline {
+            font-size: 0.9rem;
+        }
+
+        .user-location {
+            font-size: 0.8rem;
+            color: gray;
+        }
+    }
+
+    .about-div {
+        display: flex;
+        flex-direction: column;
+
+        .create-btn {
+            cursor: pointer;
+        }
+
+        header {
+            margin-top: 10px;
+            padding: 15px;
+            padding-right: 25px;
+            width: 40vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .about-index {
+            padding-top: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    .created-about-div {
+        background-color: white;
+        width: 38vw;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .edit-btn {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .about-info {
+            display: flex;
+            width: 30vw;
+            flex-direction: column;
+            
+
+        }
+
+        .body-info {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-left: 65px;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        p{
+            font-weight: 300;
+            font-size: 0.9rem;
+            margin-left: 5px;
+            margin-top: 3px;
+        }
     }
 
     .education-div {

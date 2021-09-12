@@ -13,10 +13,9 @@ const AboutIndexItem = ({about, showModal, currentUser, match})  => {
     }
     return(
         <div className='created-about-div'>
-            <img src={window.aboutImg} className='about-img' />
-
             <div className='about-info'>
                 <div className='body-info'>
+                    <i className="fas fa-bullseye"></i>
                     <p>{about.body}</p>
                 </div>
             </div>

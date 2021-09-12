@@ -40,7 +40,7 @@ class EditUserIntro extends React.Component {
     render(){
         return(
             <div className='user-intro-form'>
-                <header>
+                <header className='form-type'>
                     <h3>Edit Intro</h3>
                     <div className='close-btn' onClick={()=> this.props.hideModal()}>
                         <i className="fas fa-times"></i>
@@ -48,14 +48,18 @@ class EditUserIntro extends React.Component {
                 </header>
                 <div className='form-body'>
                     <form onSubmit={this.handleSubmit}>
-                        <div className="name-div ex-form-sub">
-                            <label>First Name*</label>
-                            <input type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
-                            <label>Last Name*</label>
-                            <input type="text" value={this.state.last_name} onChange={this.update('last_name')}/>
+                        <div className="name-div intro-form-sub">
+                            <div className='fist-name-div'>
+                                <label>First Name*</label>
+                                <input type="text" value={this.state.first_name} onChange={this.update('first_name')}/>
+                            </div>
+                            <div className='last-name-div'>
+                                <label>Last Name*</label>
+                                <input type="text" value={this.state.last_name} onChange={this.update('last_name')}/>
+                            </div>
                         </div>
 
-                        <div className='pronouns-div ex-form-sub'>
+                        <div className='pronouns-div intro-form-sub'>
                             <label>Pronouns</label>
                             <div className='pronouns-selector'>
                                 <select onChange={this.update('pronouns')}>
@@ -67,12 +71,12 @@ class EditUserIntro extends React.Component {
                             </div>
                         </div>
 
-                        <div className = 'headline-div ex-form-sub'>
+                        <div className = 'headline-div intro-form-sub'>
                             <label>Headline</label>
                             <input type="text" value={this.state.headline} onChange={this.update('headline')}/>
                         </div>
 
-                        <div className="location-div ex-form-sub">
+                        <div className="location-div intro-form-sub">
                             <label>Location</label>
                             <input type="text" placeholder="Ex: London, United Kingdom" value={this.state.location} onChange={this.update('location')}/>
                         </div>

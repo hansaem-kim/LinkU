@@ -137,7 +137,7 @@ class EducationForm extends React.Component {
             
                 <footer>
                     {deleteButton}
-                    <button className='education-create-btn' onClick={this.handleSubmit}>Save</button>
+                    <button className={deleteButton ? 'education-create-btn' : 'education-create-btn2'} onClick={this.handleSubmit}>Save</button>
                 </footer>
             </div>
 

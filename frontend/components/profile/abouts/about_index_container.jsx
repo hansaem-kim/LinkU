@@ -5,7 +5,6 @@ import { fetchAllAbouts } from '../../../actions/about_actions';
 import AboutIndex from './about_index'
 
 const mSTP = (state, ownProps) => {
-    debugger;
     return {
         profileUser: state.entities.users[ownProps.match.params.userId],
         currentUser: state.entities.users[state.session.id],

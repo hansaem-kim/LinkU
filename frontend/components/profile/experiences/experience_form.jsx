@@ -156,7 +156,7 @@ class ExperienceForm extends React.Component {
             
                 <footer>
                     {deleteButton}
-                    <button className='experience-create-btn' onClick={this.handleSubmit}>Save</button>
+                    <button className={deleteButton ? 'experience-create-btn' : 'experience-create-btn2'} onClick={this.handleSubmit}>Save</button>
                 </footer>
             </div>
 

@@ -9,8 +9,7 @@ const receiveUser = (user) => ({
 
 export const getUser = (id) => (dispatch) => (
     APIUtil.getUser(id).then(
-        user => dispatch(receiveUser(user)),
-        err => dispatch(receiveErrors(err))
+        user => dispatch(receiveUser(user))
     )
 )
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { showModal } from '../../../actions/modal_actions';
+import { getUser } from '../../../actions/user_actions';
 
 
 const mSTP = (state, ownProps) => {
@@ -14,6 +15,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         showModal: (modal, id) => dispatch(showModal(modal, id)),
+        getUser: (user) => dispatch(getUser(user)),
     }
 }
 
@@ -21,6 +23,10 @@ const mDTP = (dispatch) => {
 class UserIntro extends React.Component{
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount(){
+        this.props.getUser(this.props.profileUser);
     }
 
     render(){
@@ -34,16 +40,15 @@ class UserIntro extends React.Component{
         return(
             <div className='user-info'>
                 <header>
-                    <h2>User Intro</h2>
+                    <div className='user-name'>
+                        <h2>{this.props.profileUser.first_name} {this.props.profileUser.last_name} ({this.props.profileUser.pronouns})</h2>
+                    </div>
                     {editButton}
                 </header>
-                <div>
-                    <h2>{this.props.profileUser.first_name} {this.props.profileUser.last_name} ({this.props.profileUser.pronouns})</h2>
-                </div>
-                <div>
+                <div className='user-headline'>
                     <h3>{this.props.profileUser.headline}</h3>
                 </div>
-                <div>
+                <div className='user-location'>
                     <p>{this.props.profileUser.location}</p>
                 </div>
             </div>

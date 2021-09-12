@@ -20,7 +20,7 @@ class AboutForm extends React.Component {
     }
 
     render(){
-        const deleteButton = this.props.formType === 'Edit About' ? (
+        const deleteButton = this.props.formType === 'Edit Goal' ? (
             <button onClick={() => {
                 this.props.deleteAbout(this.state.id); this.props.hideModal()}} className='about-delete-btn'>Delete about</button>
             ) : null;
@@ -37,7 +37,7 @@ class AboutForm extends React.Component {
                 </header>
                 <div className='form-body'>
                     <form onSubmit={this.handleSubmit}>
-                        <div className = 'description-div ex-form-sub'>
+                        <div className = 'description-div about-form-sub'>
                             <label>Description</label>
                             <textarea value={this.state.body} onChange={this.update('body')}/>
                         </div>
@@ -47,7 +47,7 @@ class AboutForm extends React.Component {
             
                 <footer>
                     {deleteButton}
-                    <button className='about-create-btn' onClick={this.handleSubmit}>Save</button>
+                    <button className={deleteButton ? 'about-create-btn' : 'about-create-btn2'} onClick={this.handleSubmit}>Save</button>
                 </footer>
             </div>
 
