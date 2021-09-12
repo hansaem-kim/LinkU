@@ -6,17 +6,17 @@ class TopNav extends React.Component{
     constructor(props) {
         super(props); 
         this.state = {show: false }
-
+        this.props = props
         this.dropShow = this.dropShow.bind(this); 
         this.dropHide = this.dropHide.bind(this);
     }
 
 
-    dropShow(e) {
+    dropShow() {
         this.setState({show: true})
     }
 
-    dropHide(e){
+    dropHide(){
         this.setState({show: false})
     }
 
@@ -55,18 +55,20 @@ class TopNav extends React.Component{
                         <p>Notification</p>
 
                     </div>
-                    <div className='me-nav icon' onMouseLeave={this.dropHide}>
-                        <button className='nav-dropdown-btn' onClick={this.dropShow}>
-                            ICON
+                    <div className='me-nav icon'>
+                        <button className='nav-dropdown-btn' onFocus={this.dropShow} onBlur={this.dropHide}>
+                            <div className='profile-pic-div'>
+                                <img src={window.hansaemPhoto} className='profile-pic'/>
+                                <p>Me <i className="fas fa-caret-down"></i></p>
+                            </div>
                             <ul onClick={e => e.stopPropagation()} className={this.state.show ? "show-dropdown" : "hide-dropdown"}>
                                 <li>
                                     <div>
                                         <h3>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h3>
                                     </div>
-                                    <div>
-                                        <Link to={`/users/${this.props.currentUser.id}`} className='view-profile-btn'>
-                                            <h3 className='view-profile-msg'>View Profile</h3>
-                                        </Link>
+                                    <div className='view-profile-div' onClick={()=> {this.props.history.push(`/users/${this.props.currentUser.id}`);
+                                                        this.dropHide()}}>
+                                        <h3 className='view-profile-msg'>View Profile</h3>
                                     </div>
                                     <div className='logout-btn' onClick={this.props.logout}>
                                         <h3>Log Out</h3>
