@@ -23,8 +23,8 @@ const EducationIndexItem = ({education, showModal, currentUser, match})  => {
 
                 <div className='degree-field-grade-info'>
                     <p>{education.degree}</p>
-                    <p>, {education.field}</p>
-                    <p>, {education.grade}</p>
+                    <p>{education.degree ? ',' : ''} {education.field}</p>
+                    <p>{education.field ? ',' : ''} {education.grade}</p>
                 </div>
 
                 <div className='date-info'>

@@ -9,8 +9,8 @@ class ExperienceForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const start_date = `${this.state.start_month} ${this.state.start_year}`;
-        const end_date = `${this.state.end_month} ${this.state.end_year}`;
+        const start_date = this.state.start_month && this.state.start_year ? `${this.state.start_month} ${this.state.start_year}` : this.state.start_date;
+        const end_date = this.state.end_month && this.state.end_year ? `${this.state.end_month} ${this.state.end_year}`: this.state.end_date;
         this.props.action({
             ...this.state,
             start_date: start_date,
@@ -61,7 +61,7 @@ class ExperienceForm extends React.Component {
                             <label>Employment type</label>
                             <div className='employment-type-selector'>
                                 <select onChange={this.update('employment_type')}>
-                                    <option defaultValue>Please select</option> 
+                                    <option>Please select</option> 
                                     <option>Full-time</option>
                                     <option>Part-time</option>
                                     <option>Self-employed</option>
@@ -89,18 +89,18 @@ class ExperienceForm extends React.Component {
                             <div className='date-selector'>
                                 <select onChange={this.update('start_month')}>
                                     <option defaultValue>Month</option> 
-                                    <option>January</option>
-                                    <option>February</option>
-                                    <option>March</option>
-                                    <option>April</option>
-                                    <option>May</option>
-                                    <option>June</option>
-                                    <option>July</option>
-                                    <option>August</option>
-                                    <option>September</option>
-                                    <option>October</option>
-                                    <option>November</option>
-                                    <option>December</option>
+                                    <option value='January'>January</option>
+                                    <option value='February'>February</option>
+                                    <option value='March'>March</option>
+                                    <option value='April'>April</option>
+                                    <option value='May'>May</option>
+                                    <option value='June'>June</option>
+                                    <option value='July'>July</option>
+                                    <option value='August'>August</option>
+                                    <option value='September'>September</option>
+                                    <option value='October'>October</option>
+                                    <option value='November'>November</option>
+                                    <option value='December'>December</option>
                                 </select>
 
                                 <select onChange={this.update('start_year')}>
@@ -115,18 +115,18 @@ class ExperienceForm extends React.Component {
                             <div className='date-selector'>
                                 <select onChange={this.update('end_month')}>
                                     <option defaultValue>Month</option>
-                                    <option>January</option>
-                                    <option>February</option>
-                                    <option>March</option>
-                                    <option>April</option>
-                                    <option>May</option>
-                                    <option>June</option>
-                                    <option>July</option>
-                                    <option>August</option>
-                                    <option>September</option>
-                                    <option>October</option>
-                                    <option>November</option>
-                                    <option>December</option>
+                                    <option value='January'>January</option>
+                                    <option value='February'>February</option>
+                                    <option value='March'>March</option>
+                                    <option value='April'>April</option>
+                                    <option value='May'>May</option>
+                                    <option value='June'>June</option>
+                                    <option value='July'>July</option>
+                                    <option value='August'>August</option>
+                                    <option value='September'>September</option>
+                                    <option value='October'>October</option>
+                                    <option value='November'>November</option>
+                                    <option value='December'>December</option>
                                 </select>
 
                                 <select onChange={this.update('end_year')}>

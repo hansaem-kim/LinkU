@@ -9,8 +9,8 @@ class EducationForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const start_date = `${this.state.start_month} ${this.state.start_year}`;
-        const end_date = `${this.state.end_month} ${this.state.end_year}`;
+        const start_date = this.state.start_month && this.state.start_year ? `${this.state.start_month} ${this.state.start_year}` : this.state.start_date;
+        const end_date = this.state.end_month && this.state.end_year ? `${this.state.end_month} ${this.state.end_year}`: this.state.end_date;
         this.props.action({
             ...this.state,
             start_date: start_date,
