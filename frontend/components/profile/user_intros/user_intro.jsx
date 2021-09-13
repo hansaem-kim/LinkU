@@ -15,7 +15,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
     return {
         showModal: (modal, id) => dispatch(showModal(modal, id)),
-        getUser: (user) => dispatch(getUser(user)),
+        getUser: (id) => dispatch(getUser(id)),
     }
 }
 
@@ -26,7 +26,7 @@ class UserIntro extends React.Component{
     }
 
     componentDidMount(){
-        this.props.getUser(this.props.profileUser);
+        this.props.getUser(this.props.profileUser.id);
     }
 
     render(){
