@@ -132,9 +132,66 @@
     .created-post-header{
         display: flex;
         margin-bottom: 10px;
+
+        .header-right {
+            width: 450px;
+            display: flex;
+            flex-direction: row;
+
+            h2{
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+
+            h3{
+                color: gray;
+                font-size: 0.8rem;
+                font-weight: 300;
+            }
+        }
+
+        .dropdown {
+            position: relative;
+            left: 320px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            border: none;
+        }
+
+        .dropdown:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
     }
 
     .created-post-body{
         margin-bottom: 20px;
+    }
+
+    .show-dropdown {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid gray;
+        width: 100px;
+        height: 65px;
+        padding: 5px 0px;
+    }
+
+    .hide-dropdown {
+        display: none;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 5px 0px;
+        cursor: pointer;
+    }
+
+    .edit-btn:hover, .delete-btn:hover {
+        background-color: rgba(0, 0, 0, 0.3); 
     }
 }

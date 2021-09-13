@@ -8,6 +8,7 @@ import EditExperienceForm from '../profile/experiences/edit_experience';
 import CreateAboutForm from '../profile/abouts/create_about';
 import EditAboutForm from '../profile/abouts/edit_about';
 import CreatePostForm from '../post/create_post_form_container';
+import EditPostForm from '../post/edit_post_form_container';
 import UserIntroForm from '../profile/user_intros/user_intro_form';
 
 
@@ -47,6 +48,9 @@ const Modal = (state) => {
             break;
         case 'createPost':
             component = <CreatePostForm />;
+            break;
+        case 'editPost':
+            component = <EditPostForm />;
             break;
         default:
             return null;
