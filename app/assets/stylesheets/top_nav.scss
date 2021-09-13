@@ -37,6 +37,12 @@
         position: absolute;
         top: 70px;
         background-color: white;
+        border-radius: 10px;
+        border: 1px solid gray;
+    }
+
+    .dropdown-top {
+        padding: 10px;
     }
     
     .hide-dropdown {
@@ -71,17 +77,48 @@
     }
 
     .logout-btn {
+        border-top: 1px solid lightgray;
         cursor: pointer;
         font-size: 0.9rem;
+        margin-bottom: 7px;
+        padding-top: 5px;
+        color: gray;
     }
 
     .profile-pic-div {
         color: #63605f;
     }
 
-    .profile-pic {
+    .profile-pic-nav {
         border-radius: 50%;
         width: 20px;
+    }
+
+    .user-info-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .profile-pic-dropdown {
+            border-radius: 50%;
+            width: 50px;
+            margin-right: 7px;
+        }
+
+        .user-detail {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            h4 {
+                font-size: 0.9rem;
+                font-weight: 300;
+            }
+        }
     }
 }
 

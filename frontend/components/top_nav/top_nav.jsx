@@ -58,22 +58,28 @@ class TopNav extends React.Component{
                     <div className='me-nav icon'>
                         <button className='nav-dropdown-btn' onFocus={this.dropShow} onBlur={this.dropHide}>
                             <div className='profile-pic-div'>
-                                <img src={window.hansaemPhoto} className='profile-pic'/>
+                                <img src={window.hansaemPhoto} className='profile-pic-nav'/>
                                 <p>Me <i className="fas fa-caret-down"></i></p>
                             </div>
                             <ul onClick={e => e.stopPropagation()} className={this.state.show ? "show-dropdown" : "hide-dropdown"}>
-                                <li>
-                                    <div>
-                                        <h3>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h3>
+                                <div className='dropdown-top'>
+                                    <div className='user-info-div'>
+                                        <img src={window.hansaemPhoto} className='profile-pic-dropdown'/>
+                                        <div className='user-detail'>
+                                            <h3>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h3>
+                                            <h4>{this.props.currentUser.headline}</h4>
+                                        </div>
                                     </div>
                                     <div className='view-profile-div' onClick={()=> {this.props.history.push(`/users/${this.props.currentUser.id}`);
                                                         this.dropHide()}}>
                                         <h3 className='view-profile-msg'>View Profile</h3>
                                     </div>
-                                    <div className='logout-btn' onClick={this.props.logout}>
-                                        <h3>Log Out</h3>
-                                    </div>
-                                </li>
+                                </div>
+
+
+                                <div className='logout-btn' onClick={this.props.logout}>
+                                    <h3>Sign Out</h3>
+                                </div>
                             </ul>
                         </button>
                     </div>
