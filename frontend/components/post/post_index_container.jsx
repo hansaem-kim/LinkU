@@ -7,6 +7,7 @@ const mSTP = (state) => {
     return ({
         posts: Object.values(state.entities.posts).reverse(),
         currentUser: state.entities.users[state.session.id],
+        author: state.entities.posts.author,
     })
 }
 
