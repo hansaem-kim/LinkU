@@ -5,7 +5,7 @@ import { hideModal } from "../../actions/modal_actions";
 
 const mSTP = (state) => {
     return ({
-        posts: Object.values(state.entities.posts),
+        posts: Object.values(state.entities.posts).reverse(),
         currentUser: state.entities.users[state.session.id],
     })
 }

@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     return {
         profileUser: state.entities.users[ownProps.match.params.userId],
         currentUser: state.entities.users[state.session.id],
-        educations: Object.values(state.entities.educations)
+        educations: Object.values(state.entities.educations).reverse()
     }
 
 };

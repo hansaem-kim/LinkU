@@ -4,6 +4,20 @@
     border-radius: 10px;
     width: 500px;
 
+    .user-name-headline{
+        h2{
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        h3{
+            color: gray;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+    }
+
     footer{
         padding: 10px;
         border-top: 1px solid lightgray;
