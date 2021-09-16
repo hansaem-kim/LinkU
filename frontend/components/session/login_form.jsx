@@ -62,8 +62,8 @@ class LoginForm extends React.Component {
 
         return (
         <div className = {this.props.currentLocation !== undefined ? "session-form-container-plus" : "session-form-container" }>
-            <form onSubmit={this.handleSubmit} className="login-form-box">
             {this.renderErrors()}
+            <form onSubmit={this.handleSubmit} className="login-form-box">
             <div className="login-form">
                 {greeting}
                 <input type="text"

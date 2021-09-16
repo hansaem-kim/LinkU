@@ -53,9 +53,9 @@ class SignupForm extends React.Component {
 
         return (
         <div className = {this.props.currentLocation !== undefined ? "session-form-container-plus" : "session-form-container" }>
+            {this.renderErrors()}
             <form onSubmit={this.handleSubmit} className="login-form-box">
             <br/>
-            {this.renderErrors()}
             <div className="signup-form">
                 {greeting}
                 <input type="text"
