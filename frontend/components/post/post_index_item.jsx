@@ -8,7 +8,6 @@ class PostIndexItem extends React.Component {
     constructor(props) {
         super(props); 
         this.state = {show: false }
-        this.props = props
         this.dropShow = this.dropShow.bind(this); 
         this.dropHide = this.dropHide.bind(this);
     }
@@ -56,8 +55,8 @@ class PostIndexItem extends React.Component {
                     <img className = 'user-photo' src={window.hansaemPhoto} alt="hansaem-photo" />
                     <div className='header-right'>
                         <div>
-                            <h2>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h2>
-                            <h3>{this.props.currentUser.headline}</h3>
+                            <h2>{this.props.author.first_name} {this.props.author.last_name}</h2>
+                            <h3>{this.props.author.headline}</h3>
                         </div>
                         
                         {dropdown}

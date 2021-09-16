@@ -11,6 +11,7 @@ const AboutIndexItem = ({about, showModal, currentUser, match})  => {
     }else{
         editButton = null;
     }
+
     return(
         <div className='created-about-div'>
             <div className='about-info'>

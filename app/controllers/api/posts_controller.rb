@@ -25,7 +25,7 @@ class Api::PostsController < ApplicationController
     end
 
     def update
-        @post = Post.find(params[:id])
+        @post = Post.find(params[:post][:id])
         if @post.update(post_params)
             render :show
         else

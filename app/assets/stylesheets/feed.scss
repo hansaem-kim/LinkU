@@ -166,13 +166,16 @@
     }
 
     .created-post-body{
-
+        .attached-photo{
+            display: flex;
+            justify-content: center;
+        }
         img {
             margin-top: 10px;
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
             height: 100%;
-            max-height: 450px;
+            max-height: 500px;
         }
     }
 
