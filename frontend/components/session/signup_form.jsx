@@ -35,12 +35,29 @@ class SignupForm extends React.Component {
     }
 
     render() {
+
+        const singupGreeting = (<div className='greeting'>
+                                    <h1>Join Us</h1>
+                                    <p>Make the most of your professional life</p>
+                                </div>
+        )
+
+        let greeting;
+        if (this.props.currentLocation!==undefined){
+            if (this.props.currentLocation.pathname==='/signup'){
+                greeting = singupGreeting;            
+            }else{
+                greeting = null;
+            }
+        }
+
         return (
-        <div className="session-form-container">
+        <div className = {this.props.currentLocation !== undefined ? "session-form-container-plus" : "session-form-container" }>
             <form onSubmit={this.handleSubmit} className="login-form-box">
             <br/>
             {this.renderErrors()}
             <div className="signup-form">
+                {greeting}
                 <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
