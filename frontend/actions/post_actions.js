@@ -24,7 +24,7 @@ export const fetchAllPosts = () => dispatch => (
 );
 
 export const fetchPost = (postId) => dispatch => (
-    ApiUtil.fetchPost(postId).then((post)=>dispatch(receivePost(post)))
+    APIUtil.fetchPost(postId).then((post)=>dispatch(receivePost(post)))
 )
 
 export const createPost = (post) => dispatch => (

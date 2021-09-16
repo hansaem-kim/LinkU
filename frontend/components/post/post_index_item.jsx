@@ -24,11 +24,11 @@ class PostIndexItem extends React.Component {
     render(){
         const editButton = (
             <div className='edit-btn' onClick={() => {return this.props.showModal('editPost', this.props.post.id)}} >
-            <i class="far fa-edit"></i> Edit Post</div>)
+            <i className="far fa-edit"></i> Edit Post</div>)
 
         const deleteButton = (
             <div className='delete-btn' onClick={()=> this.props.destroyPost(this.props.post.id)}>
-            <i class="far fa-trash-alt"></i> Delete Post</div>
+            <i className="far fa-trash-alt"></i> Delete Post</div>
         )
         
         let dropdown;
@@ -67,6 +67,10 @@ class PostIndexItem extends React.Component {
                 
                 <div className="created-post-body"> 
                     <p>{this.props.post.body}</p>
+                    <div className='attached-photo'>
+                        <img src={this.props.post.photoUrl} />
+                    </div>
+                    
                 </div>
 
             </div>

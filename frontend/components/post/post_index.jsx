@@ -12,8 +12,8 @@ class PostIndex extends React.Component {
         return(
             <div>
                 {posts.map(post=>(
-                            <PostIndexItem post={post} currentUser={currentUser} destroyPost={destroyPost} key={post.id}/>
-                            ))
+                    <PostIndexItem post={post} currentUser={currentUser} destroyPost={destroyPost} key={post.id}/>
+                    ))
                 }
             </div>
         )

@@ -3,6 +3,30 @@
     border: 1px solid gray;
     border-radius: 10px;
     width: 500px;
+
+    footer{
+        padding: 10px;
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .post-submit-btn{
+            font-size: 0.9rem;
+            background-color: #0a66c2;
+            border-radius: 24px;
+            color: white;
+            border: none;
+            padding: 7px;
+            width: 60px;
+            cursor: pointer;
+        }
+
+        .add-photo-btn {
+            color: lightskyblue;
+        }
+    }
 }
 
 .form-type{
@@ -34,6 +58,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
+
+    .photo-preview{
+        img{
+            width: 100%;
+            max-width: 350px;
+            height: 100%;
+            max-height: 350px;
+        }
+    }
 
     textarea{
         width: 450px;
@@ -43,23 +77,7 @@
         padding: 5px;
     }
 
-    footer{
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        align-self: flex-end;
 
-        .post-submit-btn{
-            font-size: 0.9rem;
-            background-color: #0a66c2;
-            border-radius: 24px;
-            color: white;
-            border: none;
-            padding: 7px;
-            width: 60px;
-            cursor: pointer;
-        }
-    }
 }
 
 .modal-div {
