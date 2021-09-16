@@ -9,7 +9,6 @@ class PostIndex extends React.Component {
 
     render(){
         const {posts, destroyPost, currentUser} = this.props;
-        debugger;
         return(
             <div>
                 {posts.map(post=>(

@@ -4,6 +4,7 @@ class PostForm extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            id: this.props.post.id,
             body: this.props.post.body,
             author_id: this.props.currentUser.id,
             photoFile: null,
@@ -18,11 +19,12 @@ class PostForm extends React.Component{
         const formData = new FormData();
         formData.append("post[body]", this.state.body);
         formData.append("post[author_id]", this.state.author_id);
+        formData.append("post[id]", this.state.id);
 
         if (this.state.photoFile) {
             formData.append("post[photo]", this.state.photoFile);
         }
-
+            
         this.props.action(formData).then(this.props.hideModal);
     }
 
