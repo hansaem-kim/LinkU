@@ -22,7 +22,7 @@ class AboutForm extends React.Component {
     render(){
         const deleteButton = this.props.formType === 'Edit Goal' ? (
             <button onClick={() => {
-                this.props.deleteAbout(this.state.id); this.props.hideModal()}} className='about-delete-btn'>Delete about</button>
+                this.props.deleteAbout(this.state.id); this.props.hideModal()}} className='about-delete-btn'>Delete Goal</button>
             ) : null;
         return(
             <div className='about-form'>
