@@ -1,24 +1,20 @@
-# README
+# <p align="center"><img src="https://github.com/hansaem-kim/LinkU/blob/main/app/assets/images/linku_logo.png" width="300" height="100" /></p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+LinkU is a clone of LinkedIn, the online service used for professional networking. In LinkU, users can network with other professionals by sharing their information on profile and post/comment on newsfeed.
 
-Things you may want to cover:
+Techs Used: JavaScript, React, Redux, HTML, CSS, jQuery, Rails, JBuilder, PostgreSQL
 
-* Ruby version
+### Live Site: [LinkU](https://link-u.herokuapp.com/#/)
 
-* System dependencies
+## Features
+### User Authentication
 
-* Configuration
+### Profile
 
-* Database creation
+### Post
 
-* Database initialization
+## In Progress
+### Comments/Likes
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Add Network (connection)
