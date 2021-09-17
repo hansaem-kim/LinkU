@@ -3,9 +3,9 @@
 ## About
 LinkU is a clone of LinkedIn, the online service used for professional networking. In LinkU, users can network with other professionals by sharing their information on profile and post/comment on newsfeed.
 
-Techs Used: JavaScript, React, Redux, HTML, CSS, jQuery, Rails, JBuilder, PostgreSQL
+**Techs Used**: JavaScript, React, Redux, HTML, CSS, jQuery, Rails, JBuilder, PostgreSQL
 
-### Live Site: [LinkU](https://link-u.herokuapp.com/#/)
+#### Live Site: [LinkU](https://link-u.herokuapp.com/#/)
 
 ## Features
 ### User Authentication
