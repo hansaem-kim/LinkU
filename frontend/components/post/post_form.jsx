@@ -63,7 +63,7 @@ class PostForm extends React.Component{
                         
                     </div>
 
-                    <div className='user-info'>
+                    <div className='user-info-modal'>
                         <img className = 'user-photo' src={window.hansaemPhoto} alt="hansaem-photo" />
                         <div className='user-name-headline'>
                             <h2>{currentUser.first_name} {currentUser.last_name}</h2>

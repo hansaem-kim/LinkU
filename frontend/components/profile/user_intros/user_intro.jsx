@@ -39,18 +39,27 @@ class UserIntro extends React.Component{
         }
         return(
             <div className='user-info'>
-                <header>
-                    <div className='user-name'>
-                        <h2>{this.props.profileUser.first_name} {this.props.profileUser.last_name} ({this.props.profileUser.pronouns})</h2>
+                <div className='background-img-div'>
+                    <img className="background-img" src={window.profileBackground} />
+                </div>
+                <div className='user-photo'>
+                    <img src={window.hansaemPhoto} />
+                </div>
+                <div className='user-detail'>
+                    <header>
+                        <div className='user-name'>
+                            <h2>{this.props.profileUser.first_name} {this.props.profileUser.last_name} ({this.props.profileUser.pronouns})</h2>
+                        </div>
+                        {editButton}
+                    </header>
+                    <div className='user-headline'>
+                        <h3>{this.props.profileUser.headline}</h3>
                     </div>
-                    {editButton}
-                </header>
-                <div className='user-headline'>
-                    <h3>{this.props.profileUser.headline}</h3>
+                    <div className='user-location'>
+                        <p>{this.props.profileUser.location}</p>
+                    </div>
                 </div>
-                <div className='user-location'>
-                    <p>{this.props.profileUser.location}</p>
-                </div>
+
             </div>
         )
     }

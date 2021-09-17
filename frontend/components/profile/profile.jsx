@@ -19,9 +19,6 @@ class Profile extends React.Component{
         return(
             <div className='profile-div'>
                 <section className='sub-section user'>
-                    <div className='background-img-div'>
-                        <img className="background-img" src={window.profileBackground} />
-                    </div>
                     <UserIntro />
                 </section>
 

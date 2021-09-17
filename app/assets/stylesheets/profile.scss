@@ -2,6 +2,7 @@
     padding: 20px;
     padding-top: 70px;
     background-color: #f3f2ef;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,9 +37,28 @@
     .user-info {
         display: flex;
         flex-direction: column;
+        height: 40vh;
+
+        .user-photo {
+            position: relative;
+            bottom: 12vh;
+            left: 1vw;
+
+            img{
+                border-radius: 50%;
+                width: 130px;
+                border: 3px solid white;
+            }
+        }
 
         .edit-btn {
             margin-right: 10px;
+        }
+
+        .user-detail {
+            position: relative;
+            bottom: 12vh;
+            padding: 15px
         }
 
         header {
@@ -53,6 +73,7 @@
         }
 
         .user-headline {
+            padding: 3px 0px;
             font-size: 0.9rem;
         }
 
