@@ -58,13 +58,13 @@ class TopNav extends React.Component{
                     <div className='me-nav icon'>
                         <button className='nav-dropdown-btn' onFocus={this.dropShow} onBlur={this.dropHide}>
                             <div className='profile-pic-div'>
-                                <img src={window.hansaemPhoto} className='profile-pic-nav'/>
+                                <img src={window.profileDefault} className='profile-pic-nav'/>
                                 <p>Me <i className="fas fa-caret-down"></i></p>
                             </div>
                             <ul onClick={e => e.stopPropagation()} className={this.state.show ? "show-dropdown" : "hide-dropdown"}>
                                 <div className='dropdown-top'>
                                     <div className='user-info-div'>
-                                        <img src={window.hansaemPhoto} className='profile-pic-dropdown'/>
+                                        <img src={window.profileDefault} className='profile-pic-dropdown'/>
                                         <div className='user-detail'>
                                             <h3>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h3>
                                             <h4>{this.props.currentUser.headline}</h4>

@@ -52,7 +52,7 @@ class PostIndexItem extends React.Component {
         return(
             <div className='created-post-div'>
                 <header className='created-post-header'>
-                    <img className = 'user-photo' src={window.hansaemPhoto} alt="hansaem-photo" />
+                    <img className = 'user-photo' src={window.profileDefault} alt="hansaem-photo" />
                     <div className='header-right'>
                         <div>
                             <h2>{this.props.author.first_name} {this.props.author.last_name}</h2>

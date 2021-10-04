@@ -43,7 +43,7 @@ class UserIntro extends React.Component{
                     <img className="background-img" src={window.profileBackground} />
                 </div>
                 <div className='user-photo'>
-                    <img src={window.hansaemPhoto} />
+                    <img src={window.profileDefault} />
                 </div>
                 <div className='user-detail'>
                     <header>
