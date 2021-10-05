@@ -7,6 +7,46 @@
     align-items: center;
     background-color: #f3f2ef;
 
+    .comment-div {
+        margin-top: 20px;
+        display: flex;
+        img {
+            margin-right: 10px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        .comment-body{
+            display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2;
+            padding: 7px;
+            border-radius: 7px;
+            width: 500px;
+
+            header {
+                padding-bottom: 15px;
+            }
+
+            h3 {
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+
+            h4 {
+                font-size: 0.7rem;
+                color: gray;
+            }
+            
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+
+    }
+
     .post-div {
         width: 540px;
         padding: 15px;

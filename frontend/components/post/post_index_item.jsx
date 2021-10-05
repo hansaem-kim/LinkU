@@ -74,7 +74,7 @@ class PostIndexItem extends React.Component {
                     
                 </div>
 
-                <CommentIndexContainer postId={this.props.post.id} />
+                <CommentIndexContainer postId={this.props.post.id} comments={this.props.comments} />
             </div>
         )
     }
@@ -82,10 +82,13 @@ class PostIndexItem extends React.Component {
 
 }
 
-const mSTP = (state, ownProps) => ({
-    currentUser: state.entities.users[state.session.id],
-
-});
+const mSTP = (state, ownProps) => {
+    const comments = Object.values(state.entities.comments).filter(comment => comment.post_id === ownProps.post.id)
+    return {
+        currentUser: state.entities.users[state.session.id],
+        comments: comments,
+    }
+};
 
 const mDTP = (dispatch) => ({
     showModal: (modal, id) => dispatch(showModal(modal, id))

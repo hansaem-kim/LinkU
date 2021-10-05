@@ -7,7 +7,7 @@ class CommentIndex extends React.Component {
         return(
             <div>
                 {comments.map(comment=>(
-                    <CommentIndexItem postId={postId} user={comment.user} currentUser={currentUser} key={comment.id} />
+                    <CommentIndexItem comment={comment} postId={postId} userId={comment.user_id} currentUser={currentUser} key={comment.id} />
                     ))
                 }
             </div>

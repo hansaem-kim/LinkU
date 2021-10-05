@@ -11,6 +11,7 @@ Post.destroy_all
 About.destroy_all
 Experience.destroy_all
 Education.destroy_all
+Comment.destroy_all
 
 user1 = User.create!(
     email: "test1@gmail.com",
@@ -111,4 +112,10 @@ education3 = Education.create!(
     grade: "100%",
     start_date: "June 2021",
     end_date: "October 2021"
+)
+
+comment1 = Comment.create!(
+    user_id: user1.id,
+    post_id: post1.id,
+    body: "You are awesome!"
 )

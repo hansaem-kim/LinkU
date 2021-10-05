@@ -5,7 +5,6 @@ import { createComment, updateComment, deleteComment } from '../../actions/comme
 const mSTP = (state, ownProps) => {
     return ({
         postId: ownProps.postId,
-        comments: Object.values(state.entities.comments).reverse(),
         currentUser: state.entities.users[state.session.id],
 
     })
