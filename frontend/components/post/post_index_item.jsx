@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { showModal } from "../../actions/modal_actions";
 
+import CommentIndexContainer from "../comment/comment_index_container";
+
 
 class PostIndexItem extends React.Component {
     constructor(props) {
@@ -72,6 +74,7 @@ class PostIndexItem extends React.Component {
                     
                 </div>
 
+                <CommentIndexContainer postId={this.props.post.id} />
             </div>
         )
     }
