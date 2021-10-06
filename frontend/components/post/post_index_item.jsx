@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { showModal } from "../../actions/modal_actions";
 
 import CommentIndexContainer from "../comment/comment_index_container";
+import CreateCommentForm from "../comment/create_comment_form_container";
 
 
 class PostIndexItem extends React.Component {
@@ -73,6 +74,8 @@ class PostIndexItem extends React.Component {
                     </div>
                     
                 </div>
+
+                <CreateCommentForm postId={this.props.post.id} />
 
                 <CommentIndexContainer postId={this.props.post.id} comments={this.props.comments} />
             </div>
