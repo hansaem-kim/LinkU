@@ -45,8 +45,8 @@ class CommentIndexItem extends React.Component{
     }
 
     render() {
-        const userPic = this.props.user.profilePic ? <img src={this.props.user.profilePic} /> : <img src={window.profileDefault} />
-
+        // const userPic = this.props.user.profilePic ? <img src={this.props.user.profilePic} /> : <img src={window.profileDefault} />
+        const userPic = <img src={window.profileDefault} />
         const deleteButton = (
             <div className='delete-btn' onClick={()=> this.props.deleteComment(this.props.comment.id)}>
             <i className="far fa-trash-alt"></i> Delete</div>

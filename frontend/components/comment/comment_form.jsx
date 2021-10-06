@@ -9,10 +9,6 @@ class CommentForm extends React.Component {
 
     }
 
-    // componentDidUpdate(){
-    //     this.props.fetchAllComments();
-    // }
-
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state);
@@ -25,7 +21,7 @@ class CommentForm extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="create-comment-form">
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Add a comment..." value={this.state.body} onChange={this.update} />
                     <button className='comment-submit-btn'>Post</button>

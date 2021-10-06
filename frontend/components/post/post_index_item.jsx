@@ -10,9 +10,19 @@ import CreateCommentForm from "../comment/create_comment_form_container";
 class PostIndexItem extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = {show: false}
+        this.state = {show: false, comment: false}
         this.dropShow = this.dropShow.bind(this); 
         this.dropHide = this.dropHide.bind(this);
+        this.showComment = this.showComment.bind(this);
+        this.hideComment = this.hideComment.bind(this);
+    }
+
+    showComment() {
+        this.setState({comment: true})
+    }
+
+    hideComment() {
+        this.setState({comment: false})
     }
 
     dropShow() {
@@ -52,6 +62,14 @@ class PostIndexItem extends React.Component {
             dropdown = null;
         }
 
+        let comments;
+        comments = this.state.comment ? <div>
+                                            <CreateCommentForm postId={this.props.post.id} />
+
+                                            <CommentIndexContainer postId={this.props.post.id} comments={this.props.comments} />
+                                        </div> :
+                                        null
+
         return(
             <div className='created-post-div'>
                 <header className='created-post-header'>
@@ -75,9 +93,9 @@ class PostIndexItem extends React.Component {
                     
                 </div>
 
-                <CreateCommentForm postId={this.props.post.id} />
+                <button onClick={this.state.comment ? this.hideComment : this.showComment}>Comment</button>
 
-                <CommentIndexContainer postId={this.props.post.id} comments={this.props.comments} />
+                {comments}
             </div>
         )
     }

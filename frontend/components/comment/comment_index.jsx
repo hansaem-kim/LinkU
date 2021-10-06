@@ -6,12 +6,6 @@ class CommentIndex extends React.Component {
         super(props);
     }
 
-
-    
-    // componentDidUpdate(){
-    //     this.props.fetchAllComments();
-    // }
-
     render(){
         const {postId, comments, currentUser} = this.props;
         return(
