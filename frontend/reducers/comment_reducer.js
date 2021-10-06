@@ -3,11 +3,9 @@ import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from "../action
 const commentReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState = { ...state };
-
     switch (action.type) {
         case RECEIVE_ALL_COMMENTS:
-            newState = action.comments
-            return newState;
+            return action.comments
         case RECEIVE_COMMENT:
             newState[action.comment.id] = action.comment
             return newState;

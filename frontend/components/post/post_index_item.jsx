@@ -10,7 +10,7 @@ import CreateCommentForm from "../comment/create_comment_form_container";
 class PostIndexItem extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = {show: false }
+        this.state = {show: false}
         this.dropShow = this.dropShow.bind(this); 
         this.dropHide = this.dropHide.bind(this);
     }

@@ -7,14 +7,14 @@ class CommentForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentDidUpdate(){
-        this.props.fetchAllComments();
-    }
+    // componentDidUpdate(){
+    //     this.props.fetchAllComments();
+    // }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state);
-        this.setState({body: ""})
+        this.setState({body: ""});
     }
 
     update(field){

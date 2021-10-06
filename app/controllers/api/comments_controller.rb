@@ -4,7 +4,6 @@ class Api::CommentsController < ApplicationController
 
         if @comment.save
             render :show
-            debugger;
         else
             render json: @comment.errors.full_messages, status: 422
         end
@@ -12,7 +11,6 @@ class Api::CommentsController < ApplicationController
 
     def update
         @comment = Comment.find(params[:id])
-
         if @comment.update(comment_params)
             render :show
         else
