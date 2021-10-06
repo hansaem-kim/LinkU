@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateComment, deleteComment } from '../../actions/comment_actions';
+import { fetchAllComments } from "../../actions/comment_actions";
+
 
 class CommentIndexItem extends React.Component{
     constructor(props){
@@ -111,6 +113,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => ({
     deleteComment: commentId => dispatch(deleteComment(commentId)),
     updateComment: (comment) => (dispatch(updateComment(comment))),
+    fetchAllComments: () => (dispatch(fetchAllComments())),
+
 
 });
 

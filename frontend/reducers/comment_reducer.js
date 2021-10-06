@@ -7,7 +7,7 @@ const commentReducer = (state = {}, action) => {
         case RECEIVE_ALL_COMMENTS:
             return action.comments
         case RECEIVE_COMMENT:
-            newState[action.comment.id] = action.comment
+            newState[action.comment[Object.keys(action.comment)].id] = action.comment[Object.keys(action.comment)]
             return newState;
         case REMOVE_COMMENT:
             delete newState[action.commentId];
