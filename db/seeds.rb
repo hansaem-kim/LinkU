@@ -119,3 +119,16 @@ comment1 = Comment.create!(
     post_id: post1.id,
     body: "You are awesome!"
 )
+
+comment2 = Comment.create!(
+    user_id: user1.id,
+    post_id: post1.id,
+    body: "Hey Hansaem!"
+)
+
+comment3 = Comment.create!(
+    user_id: user1.id,
+    post_id: post2.id,
+    body: "It is good :)"
+)
+
