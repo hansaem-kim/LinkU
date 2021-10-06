@@ -57,9 +57,9 @@ class CommentIndexItem extends React.Component{
             <i className="far fa-edit"></i> Edit</div>
         )
 
-        const commentBox = this.state.edit ? <div>
+        const commentBox = this.state.edit ? <div className='edit-comment-div'>
                                                 <input type="text" value={this.state.body} onChange={this.update} />
-                                                <button onClick={this.handleSubmit}>Save Changes</button>
+                                                <button onClick={this.handleSubmit}>Save</button>
                                             </div>
                                             : 
                                             <p>{this.state.body}</p>;
@@ -82,7 +82,6 @@ class CommentIndexItem extends React.Component{
         }else{
             dropdown = null;
         }
-
         return(
             <div className='comment-div'>
                 {userPic}

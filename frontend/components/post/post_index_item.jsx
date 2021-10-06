@@ -92,8 +92,11 @@ class PostIndexItem extends React.Component {
                     </div>
                     
                 </div>
+                <footer className='comment-btn' onClick={this.state.comment ? this.hideComment : this.showComment}>
+                    <i className="far fa-comment-dots"></i>
+                    <p>Comment</p>
+                </footer>
 
-                <button onClick={this.state.comment ? this.hideComment : this.showComment}>Comment</button>
 
                 {comments}
             </div>

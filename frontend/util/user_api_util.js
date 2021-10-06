@@ -5,6 +5,13 @@ export const getUser = (id) => (
     })
 );
 
+export const getUsers = () => (
+    $.ajax({
+        url: `/api/users`,
+        method: 'GET'
+    })
+)
+
 export const updateUser = (user) => (
     $.ajax({
         url: `/api/users/${user.id}`,

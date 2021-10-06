@@ -7,11 +7,48 @@
     align-items: center;
     background-color: #f3f2ef;
 
-    // .create-comment-form {
-    //     input {
-    //         border-radius: 7px;
-    //     }
-    // }
+    .create-comment-form {
+        display: flex;
+        margin-top: 10px;
+
+        input {
+            padding: 5px;
+            padding-left: 10px;
+            height: 20px;
+            width: 440px;
+            border-radius: 15px;
+            border: 1px solid gray;
+            margin-right: 7px;
+        }
+        button {
+            height: 30px;
+            border-radius: 8px;
+            border: none;
+            background-color: #0a66c2;
+            color: white;
+        }
+
+    }
+    
+    .edit-comment-div {
+        input {
+            width: 380px;
+            height: 20px;
+            border-radius: 10px;
+            border: none;
+            padding: 3px;
+            padding-left: 10px;
+            margin-right: 5px;
+        }
+
+        button {
+            border: none;
+            border-radius: 8px;
+            background-color: #0a66c2;
+            color: white;
+            height: 25px;
+        }
+    }
 
     .comment-div {
         margin-top: 20px;
@@ -29,11 +66,7 @@
             background-color: #f2f2f2;
             padding: 7px;
             border-radius: 7px;
-            width: 500px;
-
-            header {
-                padding-bottom: 15px;
-            }
+            width: 470px;
 
             h3 {
                 font-size: 0.8rem;
@@ -52,7 +85,8 @@
 
         .dropdown {
             position: relative;
-            left: 320px;
+            left: 420px;
+            bottom: 22px;
             height: 20px;
             border-radius: 50%;
             background-color: white;
@@ -187,6 +221,27 @@
         border-radius: 10px;
         background-color: white;
         margin: 10px;
+
+
+        .comment-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: rgb(100, 98, 98);
+            padding: 5px;
+            border: none;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .comment-btn:hover{
+            background-color: rgba(0, 0, 0, 0.3);
+
+        }
     }
     
     .created-post-header{
@@ -226,6 +281,9 @@
     }
 
     .created-post-body{
+        padding-bottom: 20px;
+        border-bottom: 1px solid gray;
+
         .attached-photo{
             display: flex;
             justify-content: center;

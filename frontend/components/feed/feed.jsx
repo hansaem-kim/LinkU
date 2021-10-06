@@ -2,6 +2,11 @@ import React from "react";
 import PostIndexContainer from "../post/post_index_container";
 
 class Feed extends React.Component{
+
+    componentDidMount(){
+        this.props.getUsers();
+    }
+
     render(){
         return(
             <div className='feed-div'>
