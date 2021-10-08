@@ -269,7 +269,7 @@
     .created-post-header{
         position: relative;
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
 
         a:link {
             color: black;
@@ -313,7 +313,9 @@
 
     .created-post-body{
         padding-bottom: 20px;
+        padding-left: 10px;
         border-bottom: 1px solid gray;
+        font-size: 0.9rem;
 
         .attached-photo{
             display: flex;
