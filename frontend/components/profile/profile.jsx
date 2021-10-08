@@ -12,7 +12,7 @@ class Profile extends React.Component{
     };
 
     componentDidMount(){
-        const { educations } = this.props;
+        this.props.getUsers();
     }
 
     render(){

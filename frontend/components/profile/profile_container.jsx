@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import Profile from './profile'
 import { getUser } from '../../actions/user_actions'
 import { showModal } from '../../actions/modal_actions';
+import { getUsers } from '../../actions/user_actions';
+
 
 const mSTP = (state, ownProps) => {
     return{
@@ -16,6 +18,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => ({
     getUser: (id) => dispatch(getUser(id)),
     showModal: (modal, id) => dispatch(showModal(modal, id)),
+    getUsers: () => dispatch(getUsers()),
     
 })
 

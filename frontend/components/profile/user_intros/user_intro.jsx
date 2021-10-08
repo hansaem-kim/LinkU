@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { showModal } from '../../../actions/modal_actions';
-import { getUser } from '../../../actions/user_actions';
+import { getUser, getUsers } from '../../../actions/user_actions';
+
 
 
 const mSTP = (state, ownProps) => {
@@ -16,6 +17,8 @@ const mDTP = (dispatch) => {
     return {
         showModal: (modal, id) => dispatch(showModal(modal, id)),
         getUser: (id) => dispatch(getUser(id)),
+        getUsers: () => dispatch(getUsers()),
+
     }
 }
 
@@ -27,6 +30,7 @@ class UserIntro extends React.Component{
 
     componentDidMount(){
         this.props.getUser(this.props.profileUser.id);
+        this.props.getUsers();
     }
 
     render(){

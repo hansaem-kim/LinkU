@@ -76,8 +76,10 @@ class PostIndexItem extends React.Component {
                     <img className = 'user-photo' src={window.profileDefault} alt="hansaem-photo" />
                     <div className='header-right'>
                         <div>
-                            <h2>{this.props.author.first_name} {this.props.author.last_name}</h2>
-                            <h3>{this.props.author.headline}</h3>
+                            <Link to={`/users/${this.props.post.author_id}`}>
+                                <h2>{this.props.author.first_name} {this.props.author.last_name}</h2>
+                                <h3>{this.props.author.headline}</h3>
+                            </Link>
                         </div>
                         
                         {dropdown}

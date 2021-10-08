@@ -28,9 +28,10 @@ class ExperienceIndex extends React.Component {
                 </header>
 
                 <div className='experience-index'>
-                    {experiences.map(experience => (
-                            <ExperienceIndexItem key={experience.id} experience={experience}/>
-                        ))}
+                    {experiences.map(experience => {
+                        if (experience.userId == match.params.userId)
+                            return <ExperienceIndexItem key={experience.id} experience={experience}/>
+                    })}
                 </div>
                    
             </div>

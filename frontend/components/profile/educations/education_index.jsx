@@ -28,9 +28,10 @@ class EducationIndex extends React.Component {
                 </header>
 
                 <div className='education-index'>
-                    {educations.map(education => (
-                            <EducationIndexItem key={education.id} education={education}/>
-                        ))}
+                    {educations.map(education => {
+                        if (education.userId == match.params.userId)
+                            return <EducationIndexItem key={education.id} education={education}/>
+                        })}
                 </div>
                    
             </div>

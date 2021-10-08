@@ -245,8 +245,17 @@
     }
     
     .created-post-header{
+        position: relative;
         display: flex;
         margin-bottom: 10px;
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
 
         .header-right {
             width: 450px;
@@ -267,8 +276,8 @@
         }
 
         .dropdown {
-            position: relative;
-            left: 320px;
+            position: absolute;
+            left: 480px;
             height: 20px;
             border-radius: 50%;
             background-color: white;

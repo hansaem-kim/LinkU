@@ -19,7 +19,6 @@ class AboutIndex extends React.Component {
         }else{
             createButton = null;
         }
-
         return (
             <div className='about-div'>
                 <header >
@@ -28,9 +27,10 @@ class AboutIndex extends React.Component {
                 </header>
 
                 <div className='about-index'>
-                    {abouts.map(about => (
-                            <AboutIndexItem key={about.id} about={about}/>
-                        ))}
+                    {abouts.map(about => {
+                        if (about.user_id == match.params.userId)
+                            return <AboutIndexItem key={about.id} about={about}/>
+                    })}
                 </div>
                    
             </div>
