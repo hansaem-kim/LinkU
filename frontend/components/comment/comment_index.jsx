@@ -10,7 +10,7 @@ class CommentIndex extends React.Component {
         const {postId, comments, currentUser} = this.props;
         return(
             <div>
-                {comments.reverse().map(comment=>(
+                {comments.map(comment=>(
                     <CommentIndexItem comment={comment} postId={postId} userId={comment.user_id} currentUser={currentUser} key={comment.id} />
                     ))
                 }
