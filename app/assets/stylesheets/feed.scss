@@ -316,6 +316,11 @@
         padding-left: 10px;
         border-bottom: 1px solid gray;
         font-size: 0.9rem;
+        
+        p {
+            white-space: pre-wrap;    
+            word-wrap: break-word; 
+        }
 
         .attached-photo{
             display: flex;
