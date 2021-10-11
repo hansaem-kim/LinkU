@@ -27,14 +27,29 @@ user2 = User.create!(
     email: "test2@gmail.com",
     password: 'hansaem',
     first_name: 'Michael',
-    last_name: 'Jordan'
+    last_name: 'Jordan',
+    pronouns: "He/Him",
+    headline: "NBA Player",
+    location: "Chicago, Illinois, United States"
 )
 
 user3 = User.create!(
     email: "test3@gmail.com",
     password: 'hansaem',
     first_name: 'Bill',
-    last_name: 'Gates'
+    last_name: 'Gates',
+    pronouns: "He/Him",
+    headline: "Co-chair, Bill & Melinda Gates Foundation",
+    location: "Seattle, Washington, United States"
+)
+
+user4 = User.create!(
+    email: "test4@gmail.com",
+    password: 'hansaem',
+    first_name: "Jeff",
+    last_name: 'Weiner',
+    headline: "Executive Chairman at LinkedIn",
+    location: "United States"
 )
 
 post1 = Post.create!(
@@ -48,8 +63,28 @@ post2 = Post.create!(
 )
 
 post3 = Post.create!(
-    body: "LinkU = Great! ",
-    author_id: user1.id
+    body: "I really like LinkU! ",
+    author_id: user4.id
+)
+
+post4 = Post.create!(
+    body: "Welcome to NBA",
+    author_id: user2.id
+)
+
+about1 = About.create!(
+    user_id: user1.id,
+    body: "Study DS&A"
+)
+
+about2 = About.create!(
+    user_id: user1.id,
+    body: "10 Leetcode Problems Everyday"
+)
+
+about3 = About.create!(
+    user_id: user2.id,
+    body: "Make 1000 Shots"
 )
 
 experience1 = Experience.create!(
@@ -114,21 +149,39 @@ education3 = Education.create!(
     end_date: "October 2021"
 )
 
+education4 = Education.create!(
+    user_id: user4.id,
+    school: "The Wharton School",
+    degree: "Bachelor of Science",
+    field: "Economics",
+    activities: "",
+    description: "",
+    grade: "",
+    start_date: "August 1988",
+    end_date: "June 1992"
+)
+
 comment1 = Comment.create!(
-    user_id: user1.id,
+    user_id: user2.id,
     post_id: post1.id,
     body: "You are awesome!"
 )
 
 comment2 = Comment.create!(
-    user_id: user1.id,
+    user_id: user3.id,
     post_id: post1.id,
     body: "Hey Hansaem!"
 )
 
 comment3 = Comment.create!(
-    user_id: user1.id,
+    user_id: user4.id,
     post_id: post2.id,
     body: "It is good :)"
+)
+
+comment4 = Comment.create!(
+    user_id: user1.id,
+    post_id: post3.id,
+    body: "Thank you!!!"
 )
 
