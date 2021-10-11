@@ -4,14 +4,14 @@ class Api::ConnectionsController < ApplicationController
     end
 
     def index
-        @followers = User.find(params[:userId]).followers
-        @followees = User.find(params[:userId]).followees
+        # @followers = User.find(params[:userId]).followers
+        # @followees = User.find(params[:userId]).followees
+        @connections = Connection.where(followee_id: params[:userId])
         render :index
     end
 
     def create
         @connection = Connection.new(connection_params)
-
         if @connection.save
             render :show
         else

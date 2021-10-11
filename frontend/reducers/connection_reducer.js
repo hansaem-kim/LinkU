@@ -4,7 +4,7 @@ const connectionReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CONNECTIONS:
-            return { ...state, ...action.connections};
+            return action.connections;
         case RECEIVE_CONNECTION:
             return { ...state, ...action.connections};
         case REMOVE_CONNECTION:

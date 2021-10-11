@@ -37,7 +37,16 @@
     .user-info {
         display: flex;
         flex-direction: column;
-        height: 40vh;
+        height: 300px;
+
+        .follow-btn {
+            margin-top: 10px;
+            background-color: #0a66c2;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            padding: 5px;
+        }
 
         .user-photo {
             position: relative;
@@ -66,9 +75,19 @@
             flex-direction: row;
             justify-content: space-between;
 
+            .user-name {
+                display: flex;
+                align-items: center;
+            }
+
             .user-name > h2 {
                 font-size: 1.2rem;
                 font-weight: 500;
+            }
+
+            .user-name > p {
+                font-size: 0.8rem;
+                color: gray;
             }
         }
 
