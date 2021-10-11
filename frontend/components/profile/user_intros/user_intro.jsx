@@ -31,7 +31,7 @@ const mDTP = (dispatch) => {
 class UserIntro extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {following: false, connectionId: null};
+        this.state = {following: false, connectionId: null, followers: 0};
         this.handleConnection = this.handleConnection.bind(this);
     };
 
@@ -40,9 +40,13 @@ class UserIntro extends React.Component{
         this.props.getUsers();
         this.props.fetchConnections(this.props.profileUser.id).then(()=> {
             this.props.connections.map(connection => {
-                if (connection.followee_id == this.props.profileUser.id && connection.follower_id == this.props.currentUser.id) {
-                    this.setState({ following: true })
-                    this.setState({ connectionId: connection.id })
+                if (connection.followee_id == this.props.profileUser.id) {
+                    this.setState({ followers: this.state.followers+1 })
+                    if (connection.follower_id == this.props.currentUser.id){
+                        this.setState({ following: true })
+                        this.setState({ connectionId: connection.id })
+                    }
+
                 }
             })
         })
@@ -54,9 +58,11 @@ class UserIntro extends React.Component{
         if (!this.state.following){
             this.props.createConnection({follower_id: this.props.currentUser.id, followee_id: this.props.profileUser.id, accepted: true});
             this.setState({following: true});
+            this.setState({ followers: this.state.followers+1 });
         } else {
             this.props.deleteConnection(this.state.connectionId);
             this.setState({following: false});
+            this.setState({ followers: this.state.followers-1 })
         }
     }
 
@@ -77,6 +83,8 @@ class UserIntro extends React.Component{
         }
 
         let relationship = this.state.following ? <p className="relationship">·1st</p> : null;
+
+
         return(
             <div className='user-info'>
                 <div className='background-img-div'>
@@ -101,9 +109,14 @@ class UserIntro extends React.Component{
                     <div className='user-location'>
                         <p>{this.props.profileUser.location}</p>
                     </div>
+                    <div className='follower-number'>
+                        <p>{this.state.followers} followers</p>
+                    </div>
+                    
                     <div className='follow-user'>
                         {followButton}
                     </div>
+
                 </div>
 
             </div>

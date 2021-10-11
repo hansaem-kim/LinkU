@@ -37,7 +37,7 @@
     .user-info {
         display: flex;
         flex-direction: column;
-        height: 300px;
+        height: 320px;
 
         .follow-btn {
             margin-top: 10px;
@@ -46,6 +46,13 @@
             border-radius: 10px;
             border: none;
             padding: 5px;
+        }
+
+        .follower-number {
+            color: #0a66c2;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 5px;
         }
 
         .user-photo {
