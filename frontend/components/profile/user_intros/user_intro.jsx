@@ -68,22 +68,25 @@ class UserIntro extends React.Component{
 
     render(){
         let editButton;
-        if (this.props.currentUser.id === this.props.profileUser.id) {
-            editButton = (<div className='edit-btn' onClick={() => {return this.props.showModal('editUserIntro', this.props.currentUser.id)}} >
-            <i className="fas fa-pencil-alt" ></i></div>)
-        }else{
-            editButton = null;
+        if (this.props.currentUser && this.props.profileUser) {
+            if ( this.props.currentUser.id === this.props.profileUser.id) {
+                editButton = (<div className='edit-btn' onClick={() => {return this.props.showModal('editUserIntro', this.props.currentUser.id)}} >
+                <i className="fas fa-pencil-alt" ></i></div>)
+            }else{
+                editButton = null;
+            }
         }
 
         let followButton;
-        if (this.props.currentUser.id !== this.props.profileUser.id) {
-            followButton = this.state.following ? 
-                <button onClick={this.handleConnection} className='follow-btn'>Unfollow</button> : 
-                <button onClick={this.handleConnection} className='follow-btn'>Follow</button>
+        if (this.props.currentUser && this.props.profileUser) {
+            if (this.props.currentUser.id !== this.props.profileUser.id) {
+                followButton = this.state.following ? 
+                    <button onClick={this.handleConnection} className='follow-btn'>Unfollow</button> : 
+                    <button onClick={this.handleConnection} className='follow-btn'>Follow</button>
+            }
         }
 
         let relationship = this.state.following ? <p className="relationship">·1st</p> : null;
-
 
         return(
             <div className='user-info'>
