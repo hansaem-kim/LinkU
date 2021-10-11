@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUser, getUsers } from '../../actions/user_actions';
 import { fetchConnections, createConnection, deleteConnection } from '../../actions/connection_actions';
@@ -44,12 +45,21 @@ class MyNetwork extends React.Component{
         return(
             <div className='network-div'>
                 <div className='network-inner-div'>
-                    <h1>My Followers</h1>
+                    <header>
+                        <h1>My Followers</h1>
+                    </header>
+                    
                     {users.map(user => {
                         return (
                             <div className='network-item'>
-                                <h1>{user.first_name} {user.last_name}</h1>
-                                <p>{user.headline}</p>
+                                <img className='profile-pic' src={user.profilePic || window.profileDefault} />
+                                <div className='user-info'>
+                                    <Link to={`/users/${user.id}`}>
+                                        <h2>{user.first_name} {user.last_name}</h2>
+                                        <p>{user.headline}</p>
+                                    </Link>
+                                </div>
+
 
                             </div>
                         )

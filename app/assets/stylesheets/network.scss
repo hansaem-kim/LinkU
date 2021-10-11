@@ -10,5 +10,48 @@
         background-color: white;
         border-radius: 10px;
         border: 1px solid gray;
+        min-width: 500px;
+
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid lightgray;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            font-family: 500;
+        }
+    }
+
+    .network-item {
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+        border-bottom: 1px solid lightgray;
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        h2 {
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: gray;
+        }
+    }
+
+    .profile-pic {
+        border-radius: 50%;
+        width: 60px;
+        margin-right: 15px;
     }
 }
