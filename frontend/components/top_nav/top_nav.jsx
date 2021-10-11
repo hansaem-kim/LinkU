@@ -38,8 +38,11 @@ class TopNav extends React.Component{
                         </Link>
                     </div>
                     <div className='network-nav icon'>
-                        <i className="fas fa-user-friends"></i>
-                        <p>My Network</p>
+                        <Link to='/network'>
+                            <i className="fas fa-user-friends"></i>
+                            <p>My Network</p>
+                        </Link>
+
                     </div>
                     <div className='jobs-nav icon'>
                         <i className="fas fa-briefcase"></i>
