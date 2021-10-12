@@ -9,12 +9,16 @@ LinkU is a clone of LinkedIn, the online service used for professional networkin
 
 ## Features
 ### User Authentication
+Users can create an account with basic information. Upon logging-in users have access to additional features such as creating profile, posting, and adding networks.
 
 ### Profile
+On profile page, users can create or edit their user information, goal, experience, and education.
 
 ### Post
+Users can write posts on the live feed page. Other users can see the post and write a comment on it.
+
 
 ## In Progress
-### Comments/Likes
+### Likes
 
-### Add Network (connection)
+### Search Bar
