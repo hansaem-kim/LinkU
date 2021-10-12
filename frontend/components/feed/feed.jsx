@@ -41,6 +41,30 @@ class Feed extends React.Component{
 
                 </div>
                 <PostIndexContainer />
+
+                <div className='mini-profile-div'>
+                    <img className = 'hansaem-photo' src={window.hansaemPhoto} />
+                    <h1>Hello, I'm Hansaem.</h1>
+                    <p>Please feel free to play around with LinkU</p>
+                    <div class='sites'>
+                        <a href="https://hansaem-kim.github.io/" target="_blank">
+                        <i class="fas fa-user-circle fa-3x"></i>
+                            <p>Portfolio</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hansaem-kim-244238127/" target="_blank">
+                            <i class="fab fa-linkedin fa-3x"></i>
+                            <p>LinkedIn</p>
+                        </a>
+                        <a href="https://github.com/hansaem-kim" target="_blank">
+                            <i class="fab fa-github fa-3x"></i>
+                            <p>Github</p>
+                        </a>
+                        <a href="https://angel.co/u/hansaem-kim" target="_blank">
+                            <i class="fab fa-angellist fa-3x"></i>
+                            <p>AngelList</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         )
 
