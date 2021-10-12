@@ -24,6 +24,94 @@ Users can write posts on the live feed page. Other users can see the post and wr
 
 ![post2](app/assets/images/post-feature2.png)
 
+## Code Snippets
+To best practice object-oriented programming, every section of profile page is in its own container.
+```javascripts
+class Profile extends React.Component{
+    constructor(props){
+        super(props);
+    };
+
+    componentDidMount(){
+        this.props.getUsers();
+    }
+
+    render(){
+        return(
+            <div className='profile-div'>
+                <section className='sub-section user'>
+                    <UserIntro />
+                </section>
+
+                <section className='sub-section about'>
+                    <AboutIndexContainer />
+                </section>
+
+                <section className='sub-section experience'>
+                    <ExperienceIndexContainer />
+                </section>
+                
+                <section className='sub-section education'>
+                    <EducationIndexContainer />
+                </section>
+
+                
+            </div>
+
+        )
+    }
+}
+```
+
+Modal.jsx mananges every modal case effectively.
+```javascripts
+const Modal = (state) => {
+    const modal = state.modal;
+    if (!modal) return null;
+    let component;
+    switch(modal){
+        case 'createEducation':
+            component = <CreateEducationForm />;
+            break;
+        case 'editEducation':
+            component = <EditEducationForm />;
+            break;
+        case 'createExperience':
+            component = <CreateExperienceForm />;
+            break;
+        case 'editExperience':
+            component = <EditExperienceForm />;
+            break;
+        case 'createAbout':
+            component = <CreateAboutForm />;
+            break;
+        case 'editAbout':
+            component = <EditAboutForm />;
+            break;
+        case 'editUserIntro':
+            component = <UserIntroForm />;
+            break;
+        case 'createPost':
+            component = <CreatePostForm />;
+            break;
+        case 'editPost':
+            component = <EditPostForm />;
+            break;
+        default:
+            return null;
+    }
+
+    return (
+        <div className='modal-div'>
+            <div className='modal-component-div' onClick={e => e.stopPropagation()}>
+                { component }
+            </div>
+      </div>
+    );
+}
+```
+
+
 ## In Progress
 ### Likes
 
