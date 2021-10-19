@@ -52,6 +52,34 @@ user4 = User.create!(
     location: "United States"
 )
 
+user5 = User.create!(
+    email: "test5@gmail.com",
+    password: 'hansaem',
+    first_name: "Jaeeun",
+    last_name: 'Han',
+    headline: "CFO of Samsung Electronics",
+    location: "Seoul, Korea"
+)
+
+user6 = User.create!(
+    email: "test6@gmail.com",
+    password: 'hansaem',
+    first_name: "Jay",
+    last_name: 'Lipp',
+    headline: "High School Principal",
+    location: "Bridgeport, Connecticut, United States"
+)
+
+user7 = User.create!(
+    email: "test7@gmail.com",
+    password: 'hansaem',
+    first_name: "Lionel",
+    last_name: 'Messi',
+    headline: "Soccer Legend",
+    location: "Paris, France"
+)
+
+
 post1 = Post.create!(
     body: "Hello, My name is Hansaem Kim :) ",
     author_id: user1.id
@@ -72,6 +100,11 @@ post4 = Post.create!(
     author_id: user2.id
 )
 
+post5 = Post.create!(
+    body: "Ready to play soccer?"
+    author_id: user7.id
+)
+
 about1 = About.create!(
     user_id: user1.id,
     body: "Study DS&A"
@@ -85,6 +118,11 @@ about2 = About.create!(
 about3 = About.create!(
     user_id: user2.id,
     body: "Make 1000 Shots"
+)
+
+about4 = About.create!(
+    user_id: user7.id,
+    body: "Win Ballon'dor"
 )
 
 experience1 = Experience.create!(
