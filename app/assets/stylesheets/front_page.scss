@@ -5,13 +5,23 @@ body{
 .front-page{
     .linku-logo {
         width: 100px;
+        position: absolute;
+        left: 50px;
     }
     
     .front-page-nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin: 15px 260px;
+        padding-top: 20px;
+    }
+
+    .session-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        right: 150px;
     }
     
     .joinnow, .signin {
@@ -26,6 +36,10 @@ body{
         border: 1px solid #0a66c2;
         border-radius: 24px;
         padding: 5px 20px;
+    }
+
+    .session-error-msg {
+        color: red;
     }
     
     .welcome-message {
@@ -43,12 +57,16 @@ body{
     }
     
     .welcome-section-left {
-        padding-left: 220px;
+        position: absolute;
+        left: 50px;
     }
     
     .welcome-img {
+        position: relative;
+        left: 400px;
         width: 650px;
         padding-right: 100px;
+        z-index: -1;
     }
 
     .join-section {
@@ -59,6 +77,8 @@ body{
     }
 
     .join-message {
+        position: absolute;
+        left: 50px;
         margin-top: 5vh;
         font-size: 3rem;
         font-weight: 300;
