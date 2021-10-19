@@ -53,6 +53,15 @@
     .comment-div {
         margin-top: 20px;
         display: flex;
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
+
         img {
             margin-right: 10px;
             border-radius: 50%;

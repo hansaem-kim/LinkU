@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateComment, deleteComment } from '../../actions/comment_actions';
 import { fetchAllComments } from "../../actions/comment_actions";
@@ -88,8 +89,10 @@ class CommentIndexItem extends React.Component{
 
                 <div className='comment-body'>
                     <header>
-                        <h3>{this.props.user.first_name} {this.props.user.last_name}</h3>
-                        <h4>{this.props.user.headline}</h4>
+                        <Link to={`/users/${this.props.user.id}`}>
+                            <h3>{this.props.user.first_name} {this.props.user.last_name}</h3>
+                            <h4>{this.props.user.headline}</h4>
+                        </Link>
 
                         {dropdown}
                     </header>
