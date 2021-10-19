@@ -54,11 +54,6 @@ class Feed extends React.Component{
                     <div className='fololwer-num'>
                         {this.props.connections.length} followers
                     </div>
-                    
-
-
-
-
                 </div>
 
                 <div className='mini-profile-div'>

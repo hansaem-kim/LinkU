@@ -368,166 +368,168 @@
     .edit-btn:hover, .delete-btn:hover {
         background-color: rgba(0, 0, 0, 0.3); 
     }
+}
 
-    .user-mini-info {
+.user-mini-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 3vw;
+    height: 250px;
+    background-color: white;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    
+    header {
+        border-bottom: 1px solid gray;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: fixed;
-        left: 3vw;
-        height: 250px;
-        background-color: white;
-        width: 300px;
-        border: 1px solid gray;
-        border-radius: 10px;
-        
-        header {
-            border-bottom: 1px solid gray;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 25px;
-        }
+        padding-bottom: 25px;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 100px;  
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    P {
+        font-size: 0.9rem;
+        color: gray;
+        margin-top: 5px;
+        padding: 0px 8px;
+    }
+
+    .fololwer-num {
+        padding-top: 20px;
+        color: #0a66c2;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    .user-mini-info {
+        width: 150px;
 
         img {
             border-radius: 50%;
-            width: 100px;  
+            width: 70px;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    .user-mini-info {
+        display: none;
+    }
+}
+
+.mini-profile-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 3vw;
+    height: 300px;
+    background-color: white;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    .hansaem-photo {
+        border-radius: 50%;
+        width: 100px;
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    P {
+        font-size: 0.9rem;
+        color: gray;
+        margin-top: 5px;
+        padding: 0px 5px;
+    }
+
+    .sites {
+        margin-top: 10px;
+        display: flex;
+
+        a {
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        h1 {
-            margin-top: 10px;
-            font-weight: 500;
-        }
-
-        P {
-            font-size: 0.9rem;
-            color: gray;
-            margin-top: 5px;
-        }
-
-        .fololwer-num {
-            padding-top: 20px;
+        a:link {
             color: #0a66c2;
         }
-    }
 
-    @media only screen and (max-width: 1260px) {
-        .user-mini-info {
-            width: 150px;
-
-            img {
-                border-radius: 50%;
-                width: 70px;
-            }
+        a:visited {
+            color: #0a66c2;
         }
-
+        
 
     }
 
-    @media only screen and (max-width: 900px) {
-        .user-mini-info {
-            display: none;
-        }
-    }
+}
 
+@media only screen and (max-width: 1260px) {
     .mini-profile-div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
         right: 3vw;
-        height: 300px;
-        background-color: white;
-        width: 300px;
-        border: 1px solid gray;
-        border-radius: 10px;
-
+        height: 500px;
+        width: 150px;
+        
         .hansaem-photo {
             border-radius: 50%;
-            width: 100px;
+            width: 70px;
         }
 
         h1 {
             margin-top: 10px;
             font-weight: 500;
+            padding: 0px 5px;
+            font: 0.9rem;
+            position: relative;
+            left: 20%;
         }
 
         P {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: gray;
             margin-top: 5px;
+            padding: 0px 5px;
         }
 
         .sites {
             margin-top: 10px;
             display: flex;
-
-            a {
-                margin: 5px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            a:link {
-                color: #0a66c2;
-            }
-    
-            a:visited {
-                color: #0a66c2;
-            }
-            
-
+            flex-direction: column;
         }
 
     }
+}
 
-    @media only screen and (max-width: 1260px) {
-        .mini-profile-div {
-            right: 3vw;
-            height: 500px;
-            width: 150px;
-            
-            .hansaem-photo {
-                border-radius: 50%;
-                width: 70px;
-            }
-    
-            h1 {
-                margin-top: 10px;
-                font-weight: 500;
-                padding: 0px 5px;
-                font: 0.9rem;
-                position: relative;
-                left: 20%;
-            }
-    
-            P {
-                font-size: 0.8rem;
-                color: gray;
-                margin-top: 5px;
-                padding: 0px 5px;
-            }
-    
-            .sites {
-                margin-top: 10px;
-                display: flex;
-                flex-direction: column;
-            }
-    
-        }
-    }
+@media only screen and (max-width: 900px) {
+    .mini-profile-div {
+        display: none;
 
-    @media only screen and (max-width: 900px) {
-        .mini-profile-div {
-            display: none;
-    
 
-        }
     }
 }

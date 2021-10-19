@@ -42,6 +42,8 @@ class MyNetwork extends React.Component{
 
     render(){
         const users = this.props.users;
+        const userPic = this.props.currentUser.profilePic ? <img src={this.props.currentUser.profilePic} /> : <img src={window.profileDefault} />
+
         return(
             <div className='network-div'>
                 <div className='network-inner-div'>
@@ -64,6 +66,41 @@ class MyNetwork extends React.Component{
                             </div>
                         )
                     })}
+                </div>
+
+                <div className='user-mini-info'>
+                    <header>
+                        {userPic}
+                        <h1>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h1>
+                        <p>{this.props.currentUser.headline}</p>
+                    </header>
+                    <div className='fololwer-num'>
+                        {this.props.connections.length} followers
+                    </div>
+                </div>
+
+                <div className='mini-profile-div'>
+                    <img className = 'hansaem-photo' src={window.hansaemPhoto} />
+                    <h1>Hello, I'm Hansaem.</h1>
+                    <p>Please feel free to play around with LinkU</p>
+                    <div className='sites'>
+                        <a href="https://hansaem-kim.github.io/" target="_blank">
+                            <i className="fas fa-user-circle fa-3x"></i>
+                            <p>Portfolio</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hansaem-kim-244238127/" target="_blank">
+                            <i className="fab fa-linkedin fa-3x"></i>
+                            <p>LinkedIn</p>
+                        </a>
+                        <a href="https://github.com/hansaem-kim" target="_blank">
+                            <i className="fab fa-github fa-3x"></i>
+                            <p>Github</p>
+                        </a>
+                        <a href="https://angel.co/u/hansaem-kim" target="_blank">
+                            <i className="fab fa-angellist fa-3x"></i>
+                            <p>AngelList</p>
+                        </a>
+                    </div>
                 </div>
 
             </div>
