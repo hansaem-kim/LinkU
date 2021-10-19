@@ -18,7 +18,7 @@
 
     .sub-section {
         background-color: white;
-        width: 40vw;
+        width: 750px;
         margin: 20px 0;
         border-radius: 10px;
         border: 1px solid lightgray;
@@ -30,8 +30,8 @@
     }
 
     .background-img {
-        width: 40vw;
-        height: 20vh;
+        width: 750px;
+        height: 150px;
     }
 
     .user-info {
@@ -74,7 +74,8 @@
         .user-detail {
             position: relative;
             bottom: 12vh;
-            padding: 15px
+            padding: 15px;
+            padding-left: 30px;
         }
 
         header {
@@ -88,7 +89,7 @@
             }
 
             .user-name > h2 {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 font-weight: 500;
             }
 
@@ -112,6 +113,7 @@
     .about-div {
         display: flex;
         flex-direction: column;
+        padding-left: 10px;
 
         .create-btn {
             cursor: pointer;
@@ -120,8 +122,8 @@
         header {
             margin-top: 10px;
             padding: 15px;
-            padding-right: 25px;
-            width: 40vw;
+            padding-right: 0px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -135,25 +137,25 @@
 
     .created-about-div {
         background-color: white;
-        width: 38vw;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         margin-bottom: 15px;
 
         .edit-btn {
-            margin-right: 10px;
             cursor: pointer;
         }
 
         .about-info {
             display: flex;
-            width: 30vw;
+            width: 100%;
             flex-direction: column;
             
 
         }
 
         .body-info {
+            width: 620px;
             display: flex;
             align-items: center;
             font-size: 1rem;
@@ -175,6 +177,7 @@
     .education-div {
         display: flex;
         flex-direction: column;
+        padding-left: 10px;
 
         .create-btn {
             cursor: pointer;
@@ -183,8 +186,8 @@
         header {
             margin-top: 10px;
             padding: 15px;
-            padding-right: 25px;
-            width: 40vw;
+            padding-right: 10px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -196,8 +199,9 @@
         }
     }
     .created-education-div {
+        justify-content: space-between;
         background-color: white;
-        width: 38vw;
+        width: 100%;
         display: flex;
         margin-bottom: 15px;
 
@@ -208,13 +212,13 @@
         }
 
         .edit-btn {
-            margin-left: 10px;
+            margin-right: 10px;
             cursor: pointer;
         }
 
         .education-info {
             display: flex;
-            width: 30vw;
+            width: 600px;
             flex-direction: column;
             padding-bottom: 10px;
             border-bottom: 1px solid lightgray;
@@ -250,6 +254,7 @@
     .experience-div {
         display: flex;
         flex-direction: column;
+        padding-left: 10px;
 
         .create-btn {
             cursor: pointer;
@@ -258,8 +263,8 @@
         header {
             margin-top: 10px;
             padding: 15px;
-            padding-right: 25px;
-            width: 40vw;
+            padding-right: 0px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -272,8 +277,9 @@
     }
 
     .created-experience-div {
+        justify-content: space-between;
         background-color: white;
-        width: 38vw;
+        width: 100%;
         display: flex;
         margin-bottom: 15px;
 
@@ -284,13 +290,12 @@
         }
 
         .edit-btn {
-            margin-left: 10px;
             cursor: pointer;
         }
 
         .experience-info {
             display: flex;
-            width: 30vw;
+            width: 600px;
             flex-direction: column;
             padding-bottom: 10px;
             border-bottom: 1px solid lightgray;
