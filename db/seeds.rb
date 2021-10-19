@@ -101,7 +101,7 @@ post4 = Post.create!(
 )
 
 post5 = Post.create!(
-    body: "Ready to play soccer?"
+    body: "Ready to play soccer?",
     author_id: user7.id
 )
 
