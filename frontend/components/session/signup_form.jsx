@@ -7,9 +7,11 @@ class SignupForm extends React.Component {
             email: '',
             password: '',
             first_name: '',
-            last_name: ''
+            last_name: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoSession = this.handleDemoSession.bind(this);
+
     }
 
     update(field) {
@@ -22,15 +24,25 @@ class SignupForm extends React.Component {
         this.props.processForm(user);
     }
 
+    handleDemoSession(e) {
+        e.preventDefault();
+        this.props.login({
+            email: "test1@gmail.com",
+            password: 'hansaem',
+            first_name: 'Hansaem',
+            last_name: 'Kim',
+        })
+    }
+
     renderErrors() {
         return(
-        <ul>
-            {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
-                {error}
-            </li>
-            ))}
-        </ul>
+            <ul>
+                {this.props.errors.map((error, i) => (
+                <li className="session-errors" key={`error-${i}`}>
+                    {error}
+                </li>
+                ))}
+            </ul>
         );
     }
 
@@ -54,7 +66,7 @@ class SignupForm extends React.Component {
         return (
         <div className = {this.props.currentLocation !== undefined ? "session-form-container-plus" : "session-form-container" }>
             {this.renderErrors()}
-            <form onSubmit={this.handleSubmit} className="login-form-box">
+            <form onSubmit={this.handleSubmit} className="signup-form-box">
             <br/>
             <div className="signup-form">
                 {greeting}
@@ -83,6 +95,7 @@ class SignupForm extends React.Component {
                     placeholder="Last Name"
                 />
                 <input className="session-submit-btn" type="submit" value={this.props.formType} />
+                <button className="session-submit-btn" onClick={this.handleDemoSession}> Demo Sign in </button>
             </div>
             </form>
         </div>

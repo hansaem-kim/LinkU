@@ -11,6 +11,12 @@
     margin-top: 20px;
 }
 
+.session-errors {
+    color: rgb(247, 54, 54);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
 .login-input {
     margin-top: 20px;
     height: 35px;
@@ -32,13 +38,17 @@
     justify-content: center;
     align-items: center;
 
+    .session-error-msg {
+        color: red;
+    }
+
     form{
         border: 1px solid lightgray;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: white;
-        height: 450px;
+        height: 500px;
         width: 450px;
 
         .greeting{
@@ -52,5 +62,9 @@
                 color: gray;
             }
         }
+    }
+
+    .login-form-box {
+        height: 400px;
     }
 }
