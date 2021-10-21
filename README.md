@@ -7,6 +7,14 @@ LinkU is a clone of LinkedIn, the online service used for professional networkin
 
 #### Live Site: [LinkU](https://link-u.herokuapp.com/#/)
 
+## Technologies Used
+* Frontend: React/Redux
+* Backend: Rails
+* Style: SCSS
+* Database: PostgreSQL
+* Image Upload: AWS
+
+
 ## Features
 ### User Authentication
 Users can create an account with basic information. Upon logging-in users have access to additional features such as creating profile, posting, and adding networks.
@@ -112,7 +120,6 @@ const Modal = (state) => {
 ```
 
 
-## In Progress
-### Likes
-
-### Search Bar
+## Future Implementations
+* Likes
+* Search Bar
