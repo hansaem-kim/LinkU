@@ -4,17 +4,22 @@
     background-color: white;
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 5px;
     .u-logo {
         width: 40px;
+    }
+
+    .left-nav {
+        margin-left: 50px;
     }
     
     .right-nav {
         color: #63605f;
         font-size: 1.5rem;
         display: flex;
+        margin-right: 50px;
     }
     
     .right-nav p {
